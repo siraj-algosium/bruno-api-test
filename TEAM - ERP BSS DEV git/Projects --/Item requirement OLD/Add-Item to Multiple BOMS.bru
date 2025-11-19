@@ -1,0 +1,27 @@
+meta {
+  name: Add-Item to Multiple BOMS
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base}}/projects/2/add-item
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "item_id":5,
+      "item_variant_id":9,
+      "project_bom_ids":[16,17]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

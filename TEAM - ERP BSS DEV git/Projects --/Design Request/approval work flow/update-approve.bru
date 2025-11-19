@@ -1,0 +1,25 @@
+meta {
+  name: update-approve
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base1}}/project_design_request/2/update-approve
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 1
+}
+
+body:json {
+  {
+      "is_approved":false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

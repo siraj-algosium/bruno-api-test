@@ -1,0 +1,26 @@
+meta {
+  name: Store - Sub Task
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/project-master/main-tasks/14/sub-tasks
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"Sub Task 40",
+      "percentage":"10"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

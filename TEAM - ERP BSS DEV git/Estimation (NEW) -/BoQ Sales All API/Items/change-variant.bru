@@ -1,0 +1,32 @@
+meta {
+  name: change-variant
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/boq-sale/items/20/change-variant
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+body:json {
+  {
+      "estimation_id":4,
+      "estimation_boq_sale_id":2,
+      "item_id":4,
+      "item_variant_id":9
+  }
+}
+
+settings {
+  encodeUrl: true
+}

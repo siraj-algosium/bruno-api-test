@@ -1,0 +1,27 @@
+meta {
+  name: Add products
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/store-items-and-products
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "type":"bom",
+      "structure_id": null,
+      "bom_main_id":38
+  }
+}
+
+settings {
+  encodeUrl: true
+}

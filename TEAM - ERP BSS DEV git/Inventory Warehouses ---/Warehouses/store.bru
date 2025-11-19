@@ -1,0 +1,39 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/inventory-warehouses
+  body: json
+  auth: inherit
+}
+
+headers {
+  Cache-Control: no-cache
+  Postman-Token: <calculated when request is sent>
+  Content-Type: application/json
+  Content-Length: <calculated when request is sent>
+  Host: <calculated when request is sent>
+  User-Agent: PostmanRuntime/7.39.1
+  Accept: */*
+  Accept-Encoding: gzip, deflate, br
+  Connection: keep-alive
+  Branch: {{brach}}
+}
+
+body:json {
+  {
+      "name":"Warehouse 4",
+      "location":"India",
+      "address":"9,Tvm,Kerala",
+      "description":"Desc",
+      "contact_person_id":2
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

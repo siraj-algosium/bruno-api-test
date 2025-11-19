@@ -1,0 +1,19 @@
+meta {
+  name: remove sub task
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{base}}/projects/26/project-planning/sub-tasks/13
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

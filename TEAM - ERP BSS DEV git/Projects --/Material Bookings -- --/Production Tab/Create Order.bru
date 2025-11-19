@@ -1,0 +1,25 @@
+meta {
+  name: Create Order
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base}}/purchase-request/3/material-booking-production/products/8/create-order
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "production_unit_id":1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

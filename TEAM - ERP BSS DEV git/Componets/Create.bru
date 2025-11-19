@@ -1,0 +1,41 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/components
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 2367|oINcqKI2V0TbSqvqhTAIoy613m0FrBfzaIU38BEg39c0abee
+}
+
+body:json {
+  {
+      "name":"cmp32",
+      "tags":"cmp-tag",
+      "description":"ddd",
+      "attributes_arr":[
+          {
+              "attribute_id":1,
+              "show_when":{
+                  "and":[
+                      {
+                          "1":10
+                      }
+                  ]
+              }
+          }
+      ],
+     "description":"pr25ygggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

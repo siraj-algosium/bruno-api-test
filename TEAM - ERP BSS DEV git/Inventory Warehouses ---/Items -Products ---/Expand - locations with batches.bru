@@ -1,0 +1,31 @@
+meta {
+  name: Expand - locations with batches
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/inventory-items-products/2/locations?page&per_page&sort_col&sort_order
+  body: json
+  auth: inherit
+}
+
+params:query {
+  page: null
+  per_page: null
+  sort_col: null
+  sort_order: null
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Rivision List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/projects/24/project-planning/revisions
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 1
+  ~page: 1
+  ~sort_col: status
+  ~sort_order: desc
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Store
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/boq-cost
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "enquiry_id":"416",
+      "prepared_by":1,
+      "reviewer":1,
+      "approver":1,
+      "team_leader":1,
+      "due_date":"2025-05-01",
+      "internal_revision":"",
+      "currency_id":"1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

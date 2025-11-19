@@ -1,0 +1,25 @@
+meta {
+  name: Forward
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base}}/boq-sale/4/forward-to-cost-estimation
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":102
+  }
+}
+
+settings {
+  encodeUrl: true
+}

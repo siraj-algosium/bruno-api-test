@@ -1,0 +1,31 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/project_design_request/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "project_id":1,
+      "name":"test 9333",
+      "description" : "asd",
+      "assigned_date" : "2024-11-11",
+      "due_date" : "2024-11-11",
+      "comments" : "dfg sgfd dfg dfg",
+      "designers" : [1]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

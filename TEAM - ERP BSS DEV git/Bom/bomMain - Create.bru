@@ -1,0 +1,63 @@
+meta {
+  name: bomMain - Create
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/bomMain
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+    "name": "Ven Bom 1",
+    "description": "ven bom 1",
+    "bom_category_id": 1,
+    "bom_template_id": "5",
+    "attr_arr": [
+       {
+        "bom_attributes_id": "17",
+        "text_value": "no"
+      },
+      {
+        "bom_attributes_id": "15",
+        "bom_attribute_values_id": "16"
+      },
+      {
+        "bom_attributes_id": "20",
+        "bom_attribute_values_id": "24"    
+      },
+      {
+        "bom_attributes_id": "25",
+        "text_value": "ma"    
+      },
+      {
+        "bom_attributes_id": "24",
+        "bom_attribute_values_id": "27"    
+      }
+    ],
+    "item_arr": [
+      {
+        "items_id": 87,
+        "item_varients_id": "",
+        "quantity": "10"
+      },
+      {
+        "items_id": 85,
+        "item_varients_id": "",
+        "quantity": "200"
+      }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

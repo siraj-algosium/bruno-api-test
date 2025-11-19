@@ -1,0 +1,23 @@
+meta {
+  name: List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/product?name=product3
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: product3
+}
+
+auth:bearer {
+  token: 1883|adqJbSo7p5EoRd7TpX2HrsP93EQsZ30Aq4SFjIVk294b452e
+}
+
+settings {
+  encodeUrl: true
+}

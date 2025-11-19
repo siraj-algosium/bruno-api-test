@@ -1,0 +1,26 @@
+meta {
+  name: Delete Structure
+  type: http
+  seq: 17
+}
+
+delete {
+  url: {{base}}/boq-cost/structures/2
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":106,
+      "estimation_boq_cost_id":1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: payment term
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/payment-term-lw
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

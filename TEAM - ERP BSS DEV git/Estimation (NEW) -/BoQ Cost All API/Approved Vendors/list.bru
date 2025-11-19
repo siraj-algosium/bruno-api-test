@@ -1,0 +1,19 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/boq-cost/items/182/vendors
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

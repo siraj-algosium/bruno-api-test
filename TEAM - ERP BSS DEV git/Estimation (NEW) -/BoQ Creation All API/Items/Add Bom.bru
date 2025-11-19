@@ -1,0 +1,33 @@
+meta {
+  name: Add Bom
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/boq-creation/items
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 11
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+      "estimation_id":88,
+      "estimation_boq_creation_id":2,
+      "type":"bom",
+      "bom_main_id":"28",
+      "structure_id": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

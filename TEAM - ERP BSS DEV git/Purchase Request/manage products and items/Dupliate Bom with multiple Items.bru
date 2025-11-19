@@ -1,0 +1,44 @@
+meta {
+  name: Dupliate Bom with multiple Items
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/products/101/duplicate-with-multiple-items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "quantity": "3",
+      "items": [
+          {
+              "product_item_id": "275",
+              "boms": [
+                  {
+                      "id": 1,
+                      "quantity": 124
+                  },
+                  {
+                      "id": 2,
+                      "quantity": 123
+                  },
+                  {
+                      "id": 3,
+                      "quantity": 123
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

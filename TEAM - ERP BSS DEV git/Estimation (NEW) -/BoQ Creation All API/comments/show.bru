@@ -1,0 +1,26 @@
+meta {
+  name: show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/boq-creation/items/22/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":88,
+      "estimation_boq_creation_id":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

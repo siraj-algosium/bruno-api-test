@@ -1,0 +1,33 @@
+meta {
+  name: list
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/boq-creation/2/comments?created_at_start=2025-02-28 00:00:00&created_at_end=2025-02-28 23:59:59&user_name=Admin&comment=testing&status=pending
+  body: json
+  auth: inherit
+}
+
+params:query {
+  created_at_start: 2025-02-28 00:00:00
+  created_at_end: 2025-02-28 23:59:59
+  user_name: Admin
+  comment: testing
+  status: pending
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":88
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: send_to_approval
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/project_design_request/17/send_to_approval
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "approver_id":156,
+      "remark":"aa"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

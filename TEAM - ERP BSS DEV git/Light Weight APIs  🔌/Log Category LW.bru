@@ -1,0 +1,32 @@
+meta {
+  name: Log Category LW
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/logCategoriesLW?active=true&page=1&per_page&exclude_ids=66,65
+  body: none
+  auth: bearer
+}
+
+params:query {
+  active: true
+  page: 1
+  per_page: null
+  exclude_ids: 66,65
+  ~name: CP
+}
+
+headers {
+  Branch: 1
+  Accept: application/ecmascript
+}
+
+auth:bearer {
+  token: 241|sN6iInw6RvwnFfE0ZelLEp0iZMW1kWVCGUUVqdVI8f409cb3
+}
+
+settings {
+  encodeUrl: true
+}

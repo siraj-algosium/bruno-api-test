@@ -1,0 +1,19 @@
+meta {
+  name: Disable
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/customer/contactPerson/4/disable
+  body: none
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

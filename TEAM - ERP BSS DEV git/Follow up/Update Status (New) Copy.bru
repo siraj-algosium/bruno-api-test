@@ -1,0 +1,25 @@
+meta {
+  name: Update Status (New) Copy
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base}}/followUp/304/update-status
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "complete_remark":"dddddddddd"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

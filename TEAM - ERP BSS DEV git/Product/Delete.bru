@@ -1,0 +1,19 @@
+meta {
+  name: Delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base}}/product/2
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1883|adqJbSo7p5EoRd7TpX2HrsP93EQsZ30Aq4SFjIVk294b452e
+}
+
+settings {
+  encodeUrl: true
+}

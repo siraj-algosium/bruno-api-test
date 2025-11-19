@@ -1,0 +1,26 @@
+meta {
+  name: create new
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/items/8/attribute/1/value
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "name" : "Red"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

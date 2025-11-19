@@ -1,0 +1,32 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/bom-templates/3
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+body:json {
+  {
+      "name":"Template 3",
+      "description":"description template 3",
+      "bom_category_id":4,
+      "bom_attributes":[2,3,4,5]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

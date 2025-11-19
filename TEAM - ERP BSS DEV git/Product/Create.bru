@@ -1,0 +1,29 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/product
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 2370|Mnw1bpCU5psBNctvY5bDDZq3dOYYYALhxLkVbpxE9d5d8a4b
+}
+
+body:json {
+  {
+      "name":"product15",
+      "component_arr":[1],
+      "default_component":1,
+      "description":"pr25ygggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

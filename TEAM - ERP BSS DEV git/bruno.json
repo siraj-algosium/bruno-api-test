@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "TEAM - ERP BSS DEV copy",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

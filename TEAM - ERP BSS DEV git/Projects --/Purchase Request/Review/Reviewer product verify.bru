@@ -1,0 +1,25 @@
+meta {
+  name: Reviewer product verify
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/products/239/reviewer-verify
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "is_review_verified": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

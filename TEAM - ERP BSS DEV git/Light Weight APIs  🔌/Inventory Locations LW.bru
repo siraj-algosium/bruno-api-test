@@ -1,0 +1,29 @@
+meta {
+  name: Inventory Locations LW
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{base}}/inventoryLocationsLW?type=zone
+  body: none
+  auth: inherit
+}
+
+params:query {
+  type: zone
+  ~exclude_ids: 17
+  ~name: Z1
+  ~per_page: 5
+  ~page: 1
+  ~name_field_source: location_id
+}
+
+headers {
+  Branch: 11
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

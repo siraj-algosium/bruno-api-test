@@ -1,0 +1,23 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/estimations/102/boq-sale-revisions?page
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: null
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

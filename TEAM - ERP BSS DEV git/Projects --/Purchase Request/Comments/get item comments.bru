@@ -1,0 +1,19 @@
+meta {
+  name: get item comments
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base}}/projects/2/purchase-request/1/items/370/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

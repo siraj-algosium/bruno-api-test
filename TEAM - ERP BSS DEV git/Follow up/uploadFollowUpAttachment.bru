@@ -1,0 +1,23 @@
+meta {
+  name: uploadFollowUpAttachment
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/uploadFollowUpAttachment
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1344|G8IPsB1jctpK3IQMxaj6Pv7knXd17EQoYKFlZGNqde37bdfb
+}
+
+body:multipart-form {
+  attachments: @file()
+}
+
+settings {
+  encodeUrl: true
+}

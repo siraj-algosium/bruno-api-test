@@ -1,0 +1,25 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/projects/31/task-manager/activities/1/comments/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "comment":"updated the requirement"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

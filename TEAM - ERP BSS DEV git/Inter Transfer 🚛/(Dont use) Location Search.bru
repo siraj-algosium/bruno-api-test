@@ -1,0 +1,26 @@
+meta {
+  name: (Dont use) Location Search
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base}}/inventoryLocationSearchLW?name=W1Z5&warehouse_id=1&page=1&per_page=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: W1Z5
+  warehouse_id: 1
+  page: 1
+  per_page: 5
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

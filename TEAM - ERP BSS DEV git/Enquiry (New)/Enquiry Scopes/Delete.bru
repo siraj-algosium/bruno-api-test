@@ -1,0 +1,19 @@
+meta {
+  name: Delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base}}/log-categories/1/enquiry-scopes/3
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

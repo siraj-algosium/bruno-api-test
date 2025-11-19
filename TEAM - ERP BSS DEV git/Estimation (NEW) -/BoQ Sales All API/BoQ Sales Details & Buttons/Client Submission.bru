@@ -1,0 +1,27 @@
+meta {
+  name: Client Submission
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base}}/boq-sale/13/client-submission
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":127,
+      "tech_submission_date":"2025-05-15",
+      "tech_submission_remark":"Hddddd"//optional
+  }
+}
+
+settings {
+  encodeUrl: true
+}

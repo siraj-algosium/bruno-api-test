@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/purchase-request/3/consumable-allocation/products/7/comments/15
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 180|hpoWc8VrZUrg7byGfz1szUcrslCvMTIcbKAr9fwad404a6dd
+}
+
+body:json {
+  {
+      "comment":"updated the requirement",
+      "comment_source":"consumable_allocation"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

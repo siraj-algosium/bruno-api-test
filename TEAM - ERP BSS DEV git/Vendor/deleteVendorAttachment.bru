@@ -1,0 +1,25 @@
+meta {
+  name: deleteVendorAttachment
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/deleteVendorAttachment
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+    "name":"1733919159.jpg"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Add Item
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/projects/2/items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "item_id":116,
+      "item_variant_id":86,
+      "type":"item",
+      "structure_id": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

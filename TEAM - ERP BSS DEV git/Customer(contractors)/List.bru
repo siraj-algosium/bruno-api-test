@@ -1,0 +1,31 @@
+meta {
+  name: List
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/customer?is_active=true&getAll=true
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  is_active: true
+  getAll: true
+  ~address: add
+  ~country: ALBANIA
+  ~email_address: ee
+  ~contact_personName: jj
+  ~name: adsf
+  ~sortCol: id
+  ~sortOrder: asc
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

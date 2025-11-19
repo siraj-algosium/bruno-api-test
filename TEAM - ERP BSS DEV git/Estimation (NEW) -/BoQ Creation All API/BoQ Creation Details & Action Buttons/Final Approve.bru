@@ -1,0 +1,25 @@
+meta {
+  name: Final Approve
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base}}/boq-creation/2/final-approve
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "estimation_id":88
+  }
+}
+
+settings {
+  encodeUrl: true
+}

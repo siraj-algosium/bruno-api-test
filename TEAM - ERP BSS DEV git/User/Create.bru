@@ -1,0 +1,46 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/users?name=test user&email=testuser1@test.com1&password=123&mobile=12567&extension=12&designation=4&department=1&username=usernametest1
+  body: json
+  auth: bearer
+}
+
+params:query {
+  name: test user
+  email: testuser1@test.com1
+  password: 123
+  mobile: 12567
+  extension: 12
+  designation: 4
+  department: 1
+  username: usernametest1
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: 1344|G8IPsB1jctpK3IQMxaj6Pv7knXd17EQoYKFlZGNqde37bdfb
+}
+
+body:json {
+  {
+      "name":"tt1",
+      "email":"rr15@tt.com",
+      "password":"123",
+      "designation":4,
+      "username":"uu15",
+      "branch_list":[1,2]
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

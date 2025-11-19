@@ -1,0 +1,26 @@
+meta {
+  name: Main Task List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/project-master/main-tasks/
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~getAll: true
+  ~name: 1
+  ~weightage: 20
+  ~code: TK0001
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

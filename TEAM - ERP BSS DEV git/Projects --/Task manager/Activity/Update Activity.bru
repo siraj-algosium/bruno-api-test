@@ -1,0 +1,30 @@
+meta {
+  name: Update Activity
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/projects/31/task-manager/activities/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "planning_subtask_id":63,
+      "name":"Activity 1",
+      "description":"dfffaff",
+      "planned_start_date":"2025-06-04",
+      "planned_end_date":"2025-06-11",
+      "assigned_engineer":"1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

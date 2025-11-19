@@ -1,0 +1,30 @@
+meta {
+  name: Purchase Requests - All
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/projects/material-booking-purchase-requests?status=queued
+  body: json
+  auth: inherit
+}
+
+params:query {
+  status: queued
+  ~sortCol: project_code
+  ~sortOrder: desc
+  ~per_page: 2
+  ~material_booking_code: 3
+  ~purchase_request_code: 4
+  ~project_code: 0001
+  ~project_title: 1
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Listing
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/notifications?page=1&per_page=5&unread=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  per_page: 5
+  unread: true
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: 2299|Pwg4GQbMQjb413kAM4T3r2zgUIsehh7ncFwMFUYp02c2a4a0
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: update Bom quantity
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{base}}/boq-sale/items/bom-quantity
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+body:json {
+  {
+      "estimation_id":4,
+      "estimation_boq_sale_id":2,
+      "estimation_boq_sale_bom_id":2,
+      "quantity":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

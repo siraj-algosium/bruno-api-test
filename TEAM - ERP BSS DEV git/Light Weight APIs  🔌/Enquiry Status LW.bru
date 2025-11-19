@@ -1,0 +1,31 @@
+meta {
+  name: Enquiry Status LW
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/enquiryStatusLW?page=1&per_page
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  per_page: null
+  ~name: B
+  ~active: true
+}
+
+headers {
+  Branch: 1
+  Accept: application/ecmascript
+}
+
+auth:bearer {
+  token: 241|sN6iInw6RvwnFfE0ZelLEp0iZMW1kWVCGUUVqdVI8f409cb3
+}
+
+settings {
+  encodeUrl: true
+}

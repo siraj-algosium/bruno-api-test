@@ -1,0 +1,23 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/client/contactPerson?client=6
+  body: none
+  auth: inherit
+}
+
+params:query {
+  client: 6
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

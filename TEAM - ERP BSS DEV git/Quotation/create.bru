@@ -1,0 +1,43 @@
+meta {
+  name: create
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base}}/rfq/9/quotation
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "vendor_id": 44,
+      "delivery_term_id":1,
+      "payment_term_id":3,
+      "sea_freight":10.44,
+      "customs_duty":30.44,
+      "customes_clearance_charges":123.44,
+      "local_transportation_charges":456.44,
+      "delivery_time":"about 10 days",
+      "availability":"test 123",
+      "remarks":"super 123",
+      "items":[
+          {"id":65, "unit_price":100.3},
+          {"id":66, "unit_price":100.3},
+          {"id":67, "unit_price":100.44},
+          {"id":68, "unit_price":100.44},
+          {"id":69, "unit_price":100.44},
+          {"id":70, "unit_price":100.44},
+          {"id":71, "unit_price":100.44}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

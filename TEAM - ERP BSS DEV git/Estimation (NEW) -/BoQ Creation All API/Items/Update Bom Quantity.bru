@@ -1,0 +1,27 @@
+meta {
+  name: Update Bom Quantity
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base}}/boq-creation/boms/25/quantity
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":102,
+      "estimation_boq_creation_id":7,
+      "quantity":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

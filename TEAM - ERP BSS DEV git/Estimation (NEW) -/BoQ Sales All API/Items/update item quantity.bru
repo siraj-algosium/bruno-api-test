@@ -1,0 +1,27 @@
+meta {
+  name: update item quantity
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base}}/boq-sale/items/11/quantity
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":4,
+      "estimation_boq_sale_id":"2",
+      "quantity":5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Final Approve
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base}}/purchase-request/3/consumable-allocation/final-approve
+  body: none
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 180|hpoWc8VrZUrg7byGfz1szUcrslCvMTIcbKAr9fwad404a6dd
+}
+
+settings {
+  encodeUrl: true
+}

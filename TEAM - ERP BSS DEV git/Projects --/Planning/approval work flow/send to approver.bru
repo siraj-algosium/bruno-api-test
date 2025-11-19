@@ -1,0 +1,25 @@
+meta {
+  name: send to approver
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/projects/31/project-planning/send-to-approval
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "approver_id" : 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

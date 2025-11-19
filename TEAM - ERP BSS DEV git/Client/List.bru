@@ -1,0 +1,32 @@
+meta {
+  name: List
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/client?is_active=true&getAll=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  is_active: true
+  getAll: true
+  ~type: 1
+  ~third_party_address: add
+  ~third_party_country: AMERICAN SAMOA
+  ~email_address: ee
+  ~contact_personName: jj
+  ~name: f
+  ~sortOrder: asc
+  ~sortCol: id
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

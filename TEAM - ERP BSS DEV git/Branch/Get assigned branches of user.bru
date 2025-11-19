@@ -1,0 +1,19 @@
+meta {
+  name: Get assigned branches of user
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base}}/users/2/branch
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1344|G8IPsB1jctpK3IQMxaj6Pv7knXd17EQoYKFlZGNqde37bdfb
+}
+
+settings {
+  encodeUrl: true
+}

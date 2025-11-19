@@ -1,0 +1,25 @@
+meta {
+  name: task comments
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/29/project-planning/tasks/43/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment": "asdsad"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

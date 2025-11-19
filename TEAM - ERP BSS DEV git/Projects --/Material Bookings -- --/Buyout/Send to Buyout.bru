@@ -1,0 +1,26 @@
+meta {
+  name: Send to Buyout
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/purchase-request/3/material-booking-production/items/variant/13/send-to-buyout
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "booked_qty":"10.00",
+      "buyout_qty":"10.00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

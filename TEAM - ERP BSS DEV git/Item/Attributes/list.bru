@@ -1,0 +1,24 @@
+meta {
+  name: list
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/items/8/attribute
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~getAll: true
+  ~name: 1
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

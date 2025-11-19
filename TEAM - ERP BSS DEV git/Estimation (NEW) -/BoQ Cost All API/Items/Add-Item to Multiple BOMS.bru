@@ -1,0 +1,32 @@
+meta {
+  name: Add-Item to Multiple BOMS
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base}}/boq-cost/boms/add-item
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id": 106,
+      "estimation_boq_cost_id": 1,
+      "item_id": 112,
+      "item_variant_id": 134,
+      "boq_cost_bom_ids": [
+          3,
+          2
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Project Approve/reject
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/2/update-approve
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "is_approved": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

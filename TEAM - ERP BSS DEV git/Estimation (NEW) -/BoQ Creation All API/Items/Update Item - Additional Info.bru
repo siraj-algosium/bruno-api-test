@@ -1,0 +1,30 @@
+meta {
+  name: Update Item - Additional Info
+  type: http
+  seq: 14
+}
+
+put {
+  url: {{base}}/boq-creation/items/2/additional-info
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 11
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+      "estimation_boq_creation_id":1,
+      "additional_info":"addteahiadfdafa  afddafaf asfsfas"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

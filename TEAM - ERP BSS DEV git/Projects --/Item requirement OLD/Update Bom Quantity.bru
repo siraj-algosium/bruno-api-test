@@ -1,0 +1,25 @@
+meta {
+  name: Update Bom Quantity
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base}}/projects/25/bom/67/updateQuantity
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "quantity":20
+  }
+}
+
+settings {
+  encodeUrl: true
+}

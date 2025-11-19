@@ -1,0 +1,26 @@
+meta {
+  name: store Copy
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/inventory-warehouses/2/zones
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"{{zone_name}}",
+      "description":"Desc"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Resolve
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/products/163/comments/resolve
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: upload file
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/purchase-request/3/consumable-allocation/attachments
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:multipart-form {
+  attachment: @file(/home/venis/Pictures/Screenshots/Screenshot from 2025-07-17 12-03-42.png)
+  file_display_name: custom file namesss
+  type: documenty tyep
+}
+
+settings {
+  encodeUrl: true
+}

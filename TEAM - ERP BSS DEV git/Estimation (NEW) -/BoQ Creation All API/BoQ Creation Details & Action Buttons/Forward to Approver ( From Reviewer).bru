@@ -1,0 +1,25 @@
+meta {
+  name: Forward to Approver ( From Reviewer)
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/boq-creation/2/forward-to-approver
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "estimation_id":88
+  }
+}
+
+settings {
+  encodeUrl: true
+}

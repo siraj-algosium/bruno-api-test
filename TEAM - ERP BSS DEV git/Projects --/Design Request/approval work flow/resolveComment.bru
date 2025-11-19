@@ -1,0 +1,26 @@
+meta {
+  name: resolveComment
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base}}/project_design_request/3/attachments/5/comments/resolve
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "attachment":5,
+      "comment": "asd asd asd asd asd asd."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

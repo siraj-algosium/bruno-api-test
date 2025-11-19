@@ -1,0 +1,31 @@
+meta {
+  name: Product Listing ( Purchse Request)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/purchase-request/3/material-booking-buyout/products?sortOrder=asc&sortCol=
+  body: json
+  auth: inherit
+}
+
+params:query {
+  sortOrder: asc
+  sortCol: 
+  ~code: 130
+  ~name: New Bom 1
+  ~description: Samsung
+  ~structure_name: BOMS
+  ~page: 2
+  ~per_page: 1
+}
+
+headers {
+  Branch: 11
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

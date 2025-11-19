@@ -1,0 +1,27 @@
+meta {
+  name: Purchase Request Store
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/store
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "reviewer":2,
+      "approver": 3,
+      "type" : "external"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

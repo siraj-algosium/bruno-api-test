@@ -1,0 +1,26 @@
+meta {
+  name: Show (   Items list )
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/boq-creation/14/items?item_name=Cable&item_code=&item_varient_name=&item_category_name=
+  body: none
+  auth: inherit
+}
+
+params:query {
+  item_name: Cable
+  item_code: 
+  item_varient_name: 
+  item_category_name: 
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

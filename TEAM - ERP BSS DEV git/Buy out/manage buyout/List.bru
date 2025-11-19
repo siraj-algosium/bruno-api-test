@@ -1,0 +1,25 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/buyout-requests?filter=ewoiYnV5b3V0X2lkIjogewogICAgImZpbHRlcl90eXBlIjogImV4Y2x1ZGUiLAogICAgInZhbHVlcyI6IFsxMjAsIDEyMywgMTI0XQogIH0sCiJwcm9qZWN0X2lkIjogewogICAgImZpbHRlcl90eXBlIjogImV4Y2x1ZGUiLAogICAgInZhbHVlcyI6IFsxMDEsIDEwMiwgMTA1XQogIH0KfQo=
+  body: json
+  auth: inherit
+}
+
+params:query {
+  filter: ewoiYnV5b3V0X2lkIjogewogICAgImZpbHRlcl90eXBlIjogImV4Y2x1ZGUiLAogICAgInZhbHVlcyI6IFsxMjAsIDEyMywgMTI0XQogIH0sCiJwcm9qZWN0X2lkIjogewogICAgImZpbHRlcl90eXBlIjogImV4Y2x1ZGUiLAogICAgInZhbHVlcyI6IFsxMDEsIDEwMiwgMTA1XQogIH0KfQo=
+  ~per_page: 2
+  ~page: 2
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

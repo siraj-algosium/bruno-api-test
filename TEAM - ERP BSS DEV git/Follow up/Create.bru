@@ -1,0 +1,33 @@
+meta {
+  name: Create
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base}}/followUp
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+     "subject":1,
+     "remark":"rrr",
+     "next_date":"2024-08-30",
+    "reminder_date":"2024-08-31",
+    "enquiry_id":379
+  }
+}
+
+settings {
+  encodeUrl: true
+}

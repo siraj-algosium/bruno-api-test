@@ -1,0 +1,35 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/thirdparty
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 1352|ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+      "type":1,
+      "third_party_name":"nnn",
+      "third_party_address":"add",
+      "third_party_country":1,
+      "email_address":"ee2rr.com",
+      "contact_number":1222,
+      "isActive":true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

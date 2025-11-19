@@ -1,0 +1,25 @@
+meta {
+  name: subtask comments edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base1}}/projects/25/project-planning/sub-tasks/38/comments/11
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 1
+}
+
+body:json {
+  {
+      "comment": "sub task list"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

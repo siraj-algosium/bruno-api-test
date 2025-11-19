@@ -1,0 +1,27 @@
+meta {
+  name: Add Item to Multiple Products
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/2/products/add-item
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "item_id":116,
+      "item_variant_id":137,
+      "product_ids":[163,166]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,36 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/projects/33/task-manager/activities
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 1
+  ~page: 2
+  ~sort_col: status
+  ~sort_order: desc
+  ~status: not_started
+  ~task_name: 3
+  ~task_code: 
+  ~assigned_engineer_name: 
+  ~subtask_name: Task 122
+  ~subtask_code: t
+  ~subtask_assigned_engineer_name: tt
+  ~activity_name: 1
+  ~activity_description: 
+  ~activity_assigned_engineer_name: 
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

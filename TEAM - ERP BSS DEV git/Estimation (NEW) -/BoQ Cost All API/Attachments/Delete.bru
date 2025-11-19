@@ -1,0 +1,25 @@
+meta {
+  name: Delete
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base}}/boq-cost/4/attachments/2
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":4
+  }
+}
+
+settings {
+  encodeUrl: true
+}

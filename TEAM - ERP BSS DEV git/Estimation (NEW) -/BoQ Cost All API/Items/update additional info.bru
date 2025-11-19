@@ -1,0 +1,26 @@
+meta {
+  name: update additional info
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{base}}/boq-cost/items/6/additional-info
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_boq_cost_id":1,
+      "additional_info":"addteahi"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

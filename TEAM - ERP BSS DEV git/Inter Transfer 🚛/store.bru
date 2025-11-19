@@ -1,0 +1,40 @@
+meta {
+  name: store
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/inventory-inter-transfers
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "warehouse_id":1,
+      "items": [
+          {
+              "inventory_stock_id":2,
+              "inventory_stock_location_id": 3,
+              "transfer_qty":10,
+              "destination_location_id":2
+          },
+          {
+              "inventory_stock_id":2,
+              "inventory_stock_location_id": 5,
+              "transfer_qty":10,
+              "destination_location_id":2
+          }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

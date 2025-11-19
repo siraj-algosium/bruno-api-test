@@ -1,0 +1,23 @@
+meta {
+  name: List lite weight
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base}}/attributesListLW?name=test
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: test
+}
+
+auth:bearer {
+  token: 1941|F2apBS3dbOCe6Z9F67IuS1IB4CHh37U3NOoeT6vz2c378d8f
+}
+
+settings {
+  encodeUrl: true
+}

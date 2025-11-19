@@ -1,0 +1,20 @@
+meta {
+  name: Forward to Reviewer ( From Creator)
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/forward-to-reviewer
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+  ~Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

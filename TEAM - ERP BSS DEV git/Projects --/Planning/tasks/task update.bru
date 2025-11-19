@@ -1,0 +1,28 @@
+meta {
+  name: task update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base}}/projects/25/project-planning/tasks/18
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "weightage":197,
+      "planned_start_date":"2025-06-01",
+      "planned_end_date":"2025-06-30",
+      "assigned_engineer":1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

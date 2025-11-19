@@ -1,0 +1,27 @@
+meta {
+  name: Products List
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/productsLW?name=3&page=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: 3
+  page: 1
+  ~exclude_ids: 132
+  ~per_page: 2
+}
+
+headers {
+  Branch: 1
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

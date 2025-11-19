@@ -1,0 +1,95 @@
+meta {
+  name: Items Listing - For Add Screen
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/inventory-items-products/warehouse/2?sort_order=asc&sort_col=name
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort_order: asc
+  sort_col: name
+  ~warehouse_id: 3
+  ~page: 1
+  ~per_page: 10
+}
+
+headers {
+  Branch: 1
+}
+
+script:pre-request {
+  let postBody = `{
+      "zone_id": {
+        "filter_type": "exclude",
+        "values": []
+      },
+      "rack_id": {
+          "filter_type": "include",
+          "values": []
+      },
+      "shelf_id": {
+          "filter_type": "include",
+          "values": []
+      },
+      "bin_id": {
+          "filter_type": "include",
+          "values":[]
+      },
+      "code": {
+          "filter_type": "include",
+          "values":[]
+      },
+      "item_variant_id": {
+          "filter_type": "include",
+          "values":[]
+      },
+      "name": {
+          "filter_type": "exclude",
+          "value":""
+      },
+      "description": {
+          "filter_type": "include",
+          "value":""
+      },
+      "category": {
+          "filter_type": "exclude",
+          "value":""
+      },
+      "total_qty": {
+          "filter_type": "less_than",
+          "value":""
+      },
+      "available_qty": {
+          "filter_type": "greater_than",
+          "value":""
+      },
+      "reserved_qty": {
+          "filter_type": "exact",
+          "value":""
+      },
+      "reserved_qty": {
+          "filter_type": "range",
+          "min":"",
+          "max":""
+      }
+  }`;
+  
+  // Read the raw request body
+  let rawBody = req.getBody().raw;
+  
+  // Encode to Base64
+  let encodedBody = btoa(postBody);
+  
+  // Update the request URL with ?filter=...
+  let url = req.getUrl().toString().split("?")[0]; // base URL without query
+  req.getUrl() = url + "?filter=" + encodeURIComponent(encodedBody);
+}
+
+settings {
+  encodeUrl: true
+}

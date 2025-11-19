@@ -1,0 +1,25 @@
+meta {
+  name: list
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/boq-sale/4/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":420
+  }
+}
+
+settings {
+  encodeUrl: true
+}

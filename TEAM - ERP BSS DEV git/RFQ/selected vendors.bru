@@ -1,0 +1,27 @@
+meta {
+  name: selected vendors
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base}}/rfq/9/vendors/selected
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 1
+  ~get_all: null
+  ~page: null
+  ~vendor_id: 24
+  ~name: 8
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

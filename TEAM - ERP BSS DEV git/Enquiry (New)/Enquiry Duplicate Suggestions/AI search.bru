@@ -1,0 +1,36 @@
+meta {
+  name: AI search
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://fastapi-datnext-dev.algosium.com/search
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~getAll: true
+  ~name: co
+  ~code: PC
+  ~created_at_start: 2024-11-14
+  ~created_at_end: 2024-11-15
+  ~page: 1
+  ~per_page: 10
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+    "title": "mmm",
+    "min_score_pct": 60
+  }
+}
+
+settings {
+  encodeUrl: true
+}

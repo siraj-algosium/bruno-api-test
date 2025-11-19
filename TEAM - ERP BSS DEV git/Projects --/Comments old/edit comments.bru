@@ -1,0 +1,25 @@
+meta {
+  name: edit comments
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/projects/3/comments/2
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment":"hi test comment 123"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

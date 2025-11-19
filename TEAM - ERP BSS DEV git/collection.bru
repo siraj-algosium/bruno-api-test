@@ -1,0 +1,21 @@
+meta {
+  name: TEAM - ERP BSS DEV
+}
+
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: 4354|rsXkYA3YKQYYFz8jrDuJHh49UWYgSKB4eQOZbN334d8fdbe4
+}
+
+vars:pre-request {
+  base-uat: https://datnext-uat-api.algosium.com/api
+  base: https://datnext-dev-api.algosium.com/api
+}
+
+script:pre-request {
+  // // pm.environment.get("base");
+  // //    pm.environment.set("base", "https://datnext-dev-api.algosium.com/api");
+}

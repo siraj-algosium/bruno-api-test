@@ -1,0 +1,23 @@
+meta {
+  name: Enquiry approval
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{base}}/enquiries/6/approve
+  body: none
+  auth: bearer
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: 102|kLmqDAt8ahBFJj5JU0OLmnJo8tDwHBodrfvqFONb98f56803
+}
+
+settings {
+  encodeUrl: true
+}

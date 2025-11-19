@@ -1,0 +1,52 @@
+meta {
+  name: bomMain - Update
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/bomMain
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+    "id":9,
+    "name": "Bom 1",
+    "description": "dd",
+    "bom_category_id": 1,
+    "attr_arr": [
+       {
+        "bom_attributes_id": "24",
+        "bom_attribute_values_id": "26"
+      },
+      {
+        "bom_attributes_id": "25",
+        "text_value": "random textddd"
+      },
+      {
+        "bom_attributes_id": "26",
+        "text_value": "yes"    
+      }
+    ],
+    "item_arr": [
+      {
+        "bom_item_id":15,
+        "bom_item_varient_id":3,
+        "items_id": 1,
+        "item_varients_id": 1,
+        "quantity": 1
+      }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

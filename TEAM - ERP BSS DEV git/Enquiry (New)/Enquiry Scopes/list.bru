@@ -1,0 +1,26 @@
+meta {
+  name: list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/log-categories/60/enquiry-scopes
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~getAll: true
+  ~name: 1
+  ~page: 1
+  ~per_page: 10
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

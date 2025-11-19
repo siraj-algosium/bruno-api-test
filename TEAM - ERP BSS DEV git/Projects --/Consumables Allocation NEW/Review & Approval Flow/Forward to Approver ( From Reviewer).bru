@@ -1,0 +1,23 @@
+meta {
+  name: Forward to Approver ( From Reviewer)
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base}}/purchase-request/3/consumable-allocation/forward-to-approver
+  body: none
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 180|hpoWc8VrZUrg7byGfz1szUcrslCvMTIcbKAr9fwad404a6dd
+}
+
+settings {
+  encodeUrl: true
+}

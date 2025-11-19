@@ -1,0 +1,22 @@
+meta {
+  name: Login Copy
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "linson",
+    "password": "linson@1234"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

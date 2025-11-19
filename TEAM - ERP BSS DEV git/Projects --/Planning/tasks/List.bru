@@ -1,0 +1,33 @@
+meta {
+  name: List
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/projects/29/project-planning/tasks?subtask_name=Sub Task 17
+  body: json
+  auth: inherit
+}
+
+params:query {
+  subtask_name: Sub Task 17
+  ~per_page: 10
+  ~page: 1
+  ~task_name: 22
+  ~code: 
+  ~assigned_engineer_name: 
+  ~subtask_code: TC0005-9
+  ~subtask_assigned_engineer_name: tt
+  ~status: not_started
+  ~sort_col: task_name
+  ~sort_order: desc
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: revert
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{base}}/projects/31/task-manager/activities/1/revert
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "planning_subtask_id":1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

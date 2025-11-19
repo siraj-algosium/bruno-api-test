@@ -1,0 +1,26 @@
+meta {
+  name: buyoutLW
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/buyoutLW?exclude_ids=1179
+  body: json
+  auth: inherit
+}
+
+params:query {
+  exclude_ids: 1179
+  ~per_page: 1
+  ~page: 2
+  ~name: 7
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: List
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/contractReview
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~log_no: CR24329
+  ~techReviewer: 1
+  ~comReviewer: 1
+  ~finApprover: 1
+  ~client: 11
+  ~contractor: 11
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 1352|ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+settings {
+  encodeUrl: true
+}

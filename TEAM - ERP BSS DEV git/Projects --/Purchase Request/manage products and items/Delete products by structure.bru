@@ -1,0 +1,25 @@
+meta {
+  name: Delete products by structure
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{base}}/projects/2/purchase-request/1/products/structure-destroy/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "project_item_ids":[268,274]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

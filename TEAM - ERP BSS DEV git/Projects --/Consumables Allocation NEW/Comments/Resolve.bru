@@ -1,0 +1,23 @@
+meta {
+  name: Resolve
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/purchase-request/3/consumable-allocation/products/8/comments/resolve
+  body: none
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+settings {
+  encodeUrl: true
+}

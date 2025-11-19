@@ -1,0 +1,31 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/bom-categories
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+body:json {
+  {
+      "name":"Templates Cat 1.1",
+      "description":"Second Level",
+      "parent_id":1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

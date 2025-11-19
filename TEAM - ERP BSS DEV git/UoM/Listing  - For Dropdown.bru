@@ -1,0 +1,43 @@
+meta {
+  name: Listing  - For Dropdown
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/uom?getAll=true?name=&code=&classification=&is_base_unit=&status=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: 
+  code: 
+  classification: 
+  is_base_unit: 
+  status: 
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+script:post-response {
+  test('Status code is 2xx', () => {
+      expect(res.getStatus()).within(200, 299);
+  });
+  test('Status code is 2xx', () => {
+      expect(res.getStatus()).within(200, 299);
+  });
+  test('Status code is 3xx', () => {
+      expect(res.getStatus()).within(300, 399);
+  });
+}
+
+settings {
+  encodeUrl: true
+}

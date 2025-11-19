@@ -1,0 +1,19 @@
+meta {
+  name: Complete Transfer
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/inventory-inter-transfers/4/complete
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

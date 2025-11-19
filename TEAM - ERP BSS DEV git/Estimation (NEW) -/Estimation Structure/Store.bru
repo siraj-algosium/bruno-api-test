@@ -1,0 +1,25 @@
+meta {
+  name: Store
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/structure
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+      "name":"Office314"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

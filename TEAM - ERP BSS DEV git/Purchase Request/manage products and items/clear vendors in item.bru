@@ -1,0 +1,26 @@
+meta {
+  name: clear vendors in item
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/items/382/vendors/clear-all
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  // {
+  //   "vendor_ids": [1, 2, 41, 65]
+  // }
+  
+}
+
+settings {
+  encodeUrl: true
+}

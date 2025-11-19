@@ -1,0 +1,29 @@
+meta {
+  name: Add-Item to Multiple BOMS
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/boq-creation/boms/add-item
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":14,
+      "estimation_boq_creation_id":8,
+      "item_id":5,
+      "item_variant_id":9,
+      "boq_creation_bom_ids":[16,17]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

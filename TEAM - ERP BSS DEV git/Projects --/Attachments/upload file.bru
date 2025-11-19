@@ -1,0 +1,26 @@
+meta {
+  name: upload file
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/2/attachments
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:multipart-form {
+  attachment: @file(/C:/Users/sreyas/Pictures/Screenshots/Screenshot 2025-03-13 145320.png)
+  file_display_name: custom file namesss
+  estimation_id: 1
+  type: documenty tyep
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Enquiry LW
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/enquiriesLW?per_page=5&page=2&only_parents=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  per_page: 5
+  page: 2
+  only_parents: true
+  ~project_title: scope
+  ~log_no: CI252315
+  ~exclude_ids: 394
+}
+
+headers {
+  Branch: 11
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

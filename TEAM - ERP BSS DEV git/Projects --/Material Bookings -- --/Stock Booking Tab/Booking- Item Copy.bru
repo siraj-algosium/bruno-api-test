@@ -1,0 +1,26 @@
+meta {
+  name: Booking- Item Copy
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base}}/purchase-request/3/material-booking/items/30/stock-booking
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "booked_qty":"10.00",
+      "buyout_qty":"0.00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,39 @@
+meta {
+  name: load vendor quotation
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/rfq/9/quotation/vendor/44
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "vendor_id": 59,
+      "delivery_term_id":1,
+      "payment_term_id":3,
+      "sea_freight":10.59,
+      "customs_duty":30.59,
+      "customes_clearance_charges":123.59,
+      "local_transportation_charges":456.59,
+      "delivery_time":"about 59 days",
+      "availability":"test 59",
+      "remarks":"super 59",
+      "items":[
+          {"id":13, "unit_price":100.59},
+          {"id":12, "unit_price":100.59},
+          {"id":11, "unit_price":100.59}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

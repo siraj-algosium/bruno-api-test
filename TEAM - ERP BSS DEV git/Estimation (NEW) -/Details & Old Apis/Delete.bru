@@ -1,0 +1,23 @@
+meta {
+  name: Delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base}}/estimations/2
+  body: none
+  auth: bearer
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+settings {
+  encodeUrl: true
+}

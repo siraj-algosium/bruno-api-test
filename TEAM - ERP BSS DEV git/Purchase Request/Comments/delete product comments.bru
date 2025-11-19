@@ -1,0 +1,19 @@
+meta {
+  name: delete product comments
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base}}/projects/1/purchase-request/1/products/16/comments/64
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Customers LW
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/customersLW?name=si&page=1&perPage=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: si
+  page: 1
+  perPage: 1
+  ~active: true
+}
+
+headers {
+  Branch: 11
+  Accept: application/ecmascript
+}
+
+settings {
+  encodeUrl: true
+}

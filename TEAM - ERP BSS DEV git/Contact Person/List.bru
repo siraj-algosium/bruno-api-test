@@ -1,0 +1,28 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/contactPerson
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~client: 11
+  ~contractor: 11
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+settings {
+  encodeUrl: true
+}

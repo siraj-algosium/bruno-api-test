@@ -1,0 +1,26 @@
+meta {
+  name: Add BOM
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/2/items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "bom_main_id":31,
+      "type":"bom"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

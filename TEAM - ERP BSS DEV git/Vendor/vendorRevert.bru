@@ -1,0 +1,25 @@
+meta {
+  name: vendorRevert
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base}}/vendorRevert/2
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 2491|8rsNVU3z3uQavTnelxWbXLt673bTtEOYffHt7qhg47f92132
+}
+
+body:json {
+  {
+      "revert_comment":"Repeat once"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Reviewer - Product Verify Copy
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/products/166/reviewer-verify
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

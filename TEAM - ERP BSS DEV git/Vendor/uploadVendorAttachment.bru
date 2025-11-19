@@ -1,0 +1,23 @@
+meta {
+  name: uploadVendorAttachment
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base}}/uploadVendorAttachment
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 637|nfV723iJO1m31vFTeyBqt9UqBsMDhiDAABX2eQl6c7d491bc
+}
+
+body:multipart-form {
+  attachments: @file()
+}
+
+settings {
+  encodeUrl: true
+}

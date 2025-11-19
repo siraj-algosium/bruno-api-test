@@ -1,0 +1,29 @@
+meta {
+  name: Reviewer Item Verify
+  type: http
+  seq: 15
+}
+
+put {
+  url: {{api_url}}/api/boq-creation/items/15/reviewer-verify
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 11
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+      "estimation_boq_creation_id":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

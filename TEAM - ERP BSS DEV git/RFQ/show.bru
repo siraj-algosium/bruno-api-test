@@ -1,0 +1,19 @@
+meta {
+  name: show
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/rfq/9
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,31 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/boq-creation/items/2/vendors
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2215|JhUvdsm6NvLgoCTLCxE92o5QrVtm9gXQZoPjlhg5121181fd
+}
+
+body:json {
+  {
+      "id":"1",
+      "name":"Vendor 2222",
+      "estimation_boq_creation_item_id":"2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

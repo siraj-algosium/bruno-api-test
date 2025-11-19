@@ -1,0 +1,19 @@
+meta {
+  name: get product vendors
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{base}}/purchase-request/3/products/165/vendors/selected
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

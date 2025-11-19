@@ -1,0 +1,19 @@
+meta {
+  name: subtask comments delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base1}}/projects/25/project-planning/sub-tasks/38/comments/12
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

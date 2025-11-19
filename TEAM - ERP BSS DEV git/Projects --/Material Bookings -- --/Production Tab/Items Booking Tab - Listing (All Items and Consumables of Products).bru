@@ -1,0 +1,28 @@
+meta {
+  name: Items Booking Tab - Listing (All Items and Consumables of Products)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/purchase-request/52/material-booking-production/items
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~page: 2
+  ~per_page: 1
+  ~item_code: ITAA011
+  ~item_name: 15dddddddd
+  ~item_varient_name: RED - L
+  ~structure_name: Tank Bottom
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

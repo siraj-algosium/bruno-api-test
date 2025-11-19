@@ -1,0 +1,31 @@
+meta {
+  name: Update Item Quantity
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{base}}/boq-creation/items/32/quantity
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 11
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+      "estimation_id":4,
+      "estimation_boq_creation_id":1,
+      "quantity":5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

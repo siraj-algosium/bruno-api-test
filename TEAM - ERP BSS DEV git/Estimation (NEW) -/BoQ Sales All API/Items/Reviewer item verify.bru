@@ -1,0 +1,25 @@
+meta {
+  name: Reviewer item verify
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{base}}/boq-sale/items/20/reviewer-verify
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "estimation_boq_sale_id":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

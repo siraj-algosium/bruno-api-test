@@ -1,0 +1,27 @@
+meta {
+  name: List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/projects
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 1
+  ~page: 30
+  ~project_name: 
+  ~project_id: 2
+  ~project_manager: ad
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

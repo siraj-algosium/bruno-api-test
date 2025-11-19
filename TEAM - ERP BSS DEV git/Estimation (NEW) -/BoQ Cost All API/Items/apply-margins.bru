@@ -1,0 +1,27 @@
+meta {
+  name: apply-margins
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/boq-cost/1/items/apply-margins
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id": 106,
+      "supply_margin": 50,
+      "installation_margin": 0
+  }
+}
+
+settings {
+  encodeUrl: true
+}

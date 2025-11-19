@@ -1,0 +1,55 @@
+meta {
+  name: Dupliate Bom with multiple Items
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base}}/boq-creation/boms/31/duplicate-with-multiple-items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":111,
+      "estimation_boq_creation_id":16,
+      "quantity":2,
+      "items":[
+          {
+              "boq_creation_item_id":147,
+              "boms": [
+                  {
+                      "id":1,
+                      "quantity":10
+                  },
+                  {
+                      "id":2,
+                      "quantity":20
+                  }
+              ]
+          },
+          {
+              "boq_creation_item_id":148,
+              "boms": [
+                  {
+                      "id":1,
+                      "quantity":11
+                  },
+                  {
+                      "id":2,
+                      "quantity":12
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

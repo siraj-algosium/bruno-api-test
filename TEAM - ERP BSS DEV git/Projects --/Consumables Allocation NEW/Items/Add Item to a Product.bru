@@ -1,0 +1,26 @@
+meta {
+  name: Add Item to a Product
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/purchase-request/52/consumable-allocation/products/338/consumables
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "item_id":116,
+      "item_variant_id":137
+  }
+}
+
+settings {
+  encodeUrl: true
+}

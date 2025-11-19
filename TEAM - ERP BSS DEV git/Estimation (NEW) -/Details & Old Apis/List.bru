@@ -1,0 +1,44 @@
+meta {
+  name: List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/estimations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~status: approved
+  ~log_no: AM24432
+  ~enquiry_type_name: Engineering
+  ~project_title: Hunny Bunny
+  ~client_name: TWISTER
+  ~received_date_start: 2024-08-22
+  ~received_date_end: 2024-08-22
+  ~description: 454545
+  ~prepared_by_user_name: Admin
+  ~request_date_start: 2024-08-05
+  ~request_date_end: 2024-08-07
+  ~team_leader_user_name: Admin
+  ~approver_user_name: Admin
+  ~reviewer_name_user_name: Admin
+  ~estimation_coordinator: testuser
+  ~stage: 
+  ~due_date_start: 2024-11-24
+  ~due_date_end: 2024-11-26
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 3892|KbxIHMlwquQeyjfzqhoXXF105Dlgzp6Tvo2EEKMj782dd007
+}
+
+settings {
+  encodeUrl: true
+}

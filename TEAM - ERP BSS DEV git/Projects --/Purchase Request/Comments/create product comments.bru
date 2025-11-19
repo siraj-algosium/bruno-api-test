@@ -1,0 +1,25 @@
+meta {
+  name: create product comments
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/products/134/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment":"hi test comment 123"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

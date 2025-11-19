@@ -1,0 +1,39 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/projects
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "project_title": "sample project name 1",
+      "project_manager": 1,
+      "description": "descriptions",
+      "enquiry_type": 1,
+      "customer_id": 1,
+      "country_id": 1,
+      "region" : "asd",
+      "entry_date" : "2025-01-01",
+      "last_date" : "2025-01-01",
+      "awarded_date" : "2025-01-01",
+      "po_value" : 23,
+      "po_currency_id" : 1
+  }
+  
+      // "planning_creater" : 1
+  
+}
+
+settings {
+  encodeUrl: true
+}

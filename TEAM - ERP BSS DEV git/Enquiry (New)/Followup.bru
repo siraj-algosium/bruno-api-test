@@ -1,0 +1,30 @@
+meta {
+  name: Followup
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{base}}/followUp
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:multipart-form {
+  subject: 3
+  remark: test
+  next_date: 2025-04-22
+  reminder_date: 2025-05-03
+  enquiry_id: 35
+  quote_value: 
+  quote_currency: 
+  attachments[]: @file(/home/venis/Pictures/Screenshots/Screenshot from 2025-04-17 16-00-44.png|/home/venis/Pictures/Screenshots/Screenshot from 2025-04-21 12-34-04.png|/home/venis/Pictures/Screenshots/Screenshot from 2025-04-21 12-00-56.png)
+}
+
+settings {
+  encodeUrl: true
+}

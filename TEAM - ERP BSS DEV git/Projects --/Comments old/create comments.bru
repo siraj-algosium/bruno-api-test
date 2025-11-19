@@ -1,0 +1,26 @@
+meta {
+  name: create comments
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/projects/25/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment":"hi test comment 123",
+      "project_item_id":148
+  }
+}
+
+settings {
+  encodeUrl: true
+}

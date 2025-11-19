@@ -1,0 +1,29 @@
+meta {
+  name: Approval Revert
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/boq-sale/16/approval-revert
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+body:json {
+  {
+      "estimation_id":4
+  }
+}
+
+settings {
+  encodeUrl: true
+}

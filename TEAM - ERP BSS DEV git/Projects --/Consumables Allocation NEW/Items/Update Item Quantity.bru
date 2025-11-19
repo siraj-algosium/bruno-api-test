@@ -1,0 +1,25 @@
+meta {
+  name: Update Item Quantity
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base}}/purchase-request/3/consumable-allocation/products/8/consumables/31
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "quantity":20
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Delete Multiple Items
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base}}/projects/2/items/destroyMultipleItems
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "project_item_ids":[51]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

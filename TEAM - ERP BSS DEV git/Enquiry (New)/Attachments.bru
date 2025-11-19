@@ -1,0 +1,24 @@
+meta {
+  name: Attachments
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{base}}/enquiries/88/attachment?page=1&per_page=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  per_page: 2
+}
+
+headers {
+  branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

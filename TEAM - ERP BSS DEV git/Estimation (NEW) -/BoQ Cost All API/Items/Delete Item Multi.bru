@@ -1,0 +1,27 @@
+meta {
+  name: Delete Item Multi
+  type: http
+  seq: 15
+}
+
+delete {
+  url: {{base}}/boq-cost/items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":106,
+      "estimation_boq_cost_id":1,
+      "boq_cost_item_ids":[20,21]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

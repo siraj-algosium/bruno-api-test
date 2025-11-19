@@ -1,0 +1,25 @@
+meta {
+  name: Delete Multiple products
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{base}}/projects/2/purchase-request/1/products/multiple-destroy
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "project_bom_ids":[138,139]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

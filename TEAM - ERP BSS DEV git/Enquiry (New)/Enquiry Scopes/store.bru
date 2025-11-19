@@ -1,0 +1,26 @@
+meta {
+  name: store
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/log-categories/56/enquiry-scopes
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"Scope 15"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

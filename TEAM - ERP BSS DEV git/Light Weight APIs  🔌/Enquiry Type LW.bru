@@ -1,0 +1,27 @@
+meta {
+  name: Enquiry Type LW
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base}}/enquiryTypesLW?page=1&per_page&
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  per_page: null
+  : null
+  ~name: CP
+}
+
+headers {
+  Branch: 11
+  Accept: application/ecmascript
+}
+
+settings {
+  encodeUrl: true
+}

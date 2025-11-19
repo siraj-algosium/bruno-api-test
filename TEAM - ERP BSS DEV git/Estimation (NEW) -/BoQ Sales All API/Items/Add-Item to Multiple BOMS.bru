@@ -1,0 +1,36 @@
+meta {
+  name: Add-Item to Multiple BOMS
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/boq-sale/boms/add-item
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+body:json {
+  {
+      "estimation_id": 14,
+      "estimation_boq_sale_id": 8,
+      "item_id": 5,
+      "item_variant_id": 9,
+      "boq_sale_bom_ids": [
+          16,
+          17
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

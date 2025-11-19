@@ -1,0 +1,38 @@
+meta {
+  name: save-account-overheads
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base}}/boq-cost/1/items/save-account-overheads
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id": 106,
+      "overhead_alloc_method": "per_unit", // per_unit
+      "overhead_items": [
+          {
+              "category": "admin",
+              "desc": "admin related charges",
+              "amount": 110.00
+          },
+          {
+              "category": "others",
+              "desc": "utility charges",
+              "amount": 60.00
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,37 @@
+meta {
+  name: store
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/logcategory
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "name":"Test 1",
+      "code":"TT1",
+      "scopes": [
+          {
+              "id": "ID42909",
+              "name": "Scope 1"
+          },
+          {
+              "id": "ID42910",
+              "name": "Scope 2"
+          }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

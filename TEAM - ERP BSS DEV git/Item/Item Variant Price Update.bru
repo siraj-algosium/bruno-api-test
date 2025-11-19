@@ -1,0 +1,26 @@
+meta {
+  name: Item Variant Price Update
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{base}}/itemVariantPriceUpdate/84
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+      "currency_id":"1",
+      "price":"101.00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

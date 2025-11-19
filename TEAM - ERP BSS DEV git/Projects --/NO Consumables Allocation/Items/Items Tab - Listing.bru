@@ -1,0 +1,28 @@
+meta {
+  name: Items Tab - Listing
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/items?page=2
+  body: json
+  auth: inherit
+}
+
+params:query {
+  page: 2
+  ~per_page: 1
+  ~code: 2
+  ~name: 2
+  ~description: 2 p
+  ~structure_name: te
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

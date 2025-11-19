@@ -1,0 +1,25 @@
+meta {
+  name: Update Item Quantity
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/1/items/370/update-quantity
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "quantity":55
+  }
+}
+
+settings {
+  encodeUrl: true
+}

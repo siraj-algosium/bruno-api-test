@@ -1,0 +1,28 @@
+meta {
+  name: itemVariantListLW_1
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{base}}/itemVariantListLW/116?page=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  ~search_text: RED
+}
+
+body:json {
+  {
+    "attribute": {
+      "87": 212
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

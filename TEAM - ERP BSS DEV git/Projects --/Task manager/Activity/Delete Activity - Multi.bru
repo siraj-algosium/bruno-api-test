@@ -1,0 +1,25 @@
+meta {
+  name: Delete Activity - Multi
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{base}}/projects/31/task-manager/activities
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "activity_ids":[5]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

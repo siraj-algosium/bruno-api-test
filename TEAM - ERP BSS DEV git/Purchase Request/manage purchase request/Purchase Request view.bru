@@ -1,0 +1,23 @@
+meta {
+  name: Purchase Request view
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/purchase-request/1?purpose=stock_purchase
+  body: json
+  auth: inherit
+}
+
+params:query {
+  purpose: stock_purchase
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

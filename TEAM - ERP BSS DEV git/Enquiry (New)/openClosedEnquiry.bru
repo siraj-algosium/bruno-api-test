@@ -1,0 +1,25 @@
+meta {
+  name: openClosedEnquiry
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{base}}/openClosedEnquiry/291
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 2327|kxoNQdroy3RVMLTxKmoHDeKL3WwbVW4GyyDFWBmIe277d532
+}
+
+body:json {
+  {
+    "opening_remark":"rr22"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

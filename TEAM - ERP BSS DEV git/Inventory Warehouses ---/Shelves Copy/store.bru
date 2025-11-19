@@ -1,0 +1,36 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/inventory-warehouses/2/zones/4/racks/9/shelves
+  body: json
+  auth: inherit
+}
+
+headers {
+  Cache-Control: no-cache
+  Postman-Token: <calculated when request is sent>
+  Content-Type: application/json
+  Content-Length: <calculated when request is sent>
+  Host: <calculated when request is sent>
+  User-Agent: PostmanRuntime/7.39.1
+  Accept: */*
+  Accept-Encoding: gzip, deflate, br
+  Connection: keep-alive
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"{{shelf_name}}",
+      "description":"Desc............................."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

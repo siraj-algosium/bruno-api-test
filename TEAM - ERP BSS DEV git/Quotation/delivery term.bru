@@ -1,0 +1,19 @@
+meta {
+  name: delivery term
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/delivery-term-lw
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Submit for Review ( only Creator) Copy
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/contractReview/216/submit-for-review
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

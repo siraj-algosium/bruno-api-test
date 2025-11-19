@@ -1,0 +1,62 @@
+meta {
+  name: Global Enquiries - Pending
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/enquiries/global-pending/?branch=27
+  body: none
+  auth: inherit
+}
+
+params:query {
+  branch: 27
+  ~per_page: 30
+  ~enquiry_reg_date: 2024-04-29
+  ~project_title: tt
+  ~description: dd
+  ~log_category: 1
+  ~enquiry_type: 1
+  ~log_no: CA240275
+  ~priority: 1
+  ~contractor: 11
+  ~client: 11
+  ~contractor_reference: 11
+  ~local_company: 1
+  ~tender_no: 11
+  ~country_code: 1
+  ~region: 12
+  ~received_date: 2024-04-23
+  ~last_date: 2001-01-02
+  ~estimation_coordinator: 1
+  ~proposal_engineer: 1
+  ~sales_engineer: 1
+  ~remarks: rr
+  ~next_followup_date: 2001-01-01
+  ~add_contact: 167
+  ~sortOrder: project_title:false
+  ~awarded_date_start: 2024-08-01
+  ~awarded_date_end: 2024-08-01
+  ~next_followup_date_start: 2024-05-29
+  ~next_followup_date_end: 2024-09-29
+  ~received_date_start: 2024-05-24
+  ~received_date_end: 2024-09-24
+  ~last_date_start: 2024-06-25
+  ~last_date_end: 2024-07-25
+  ~submission_date_tech_start: 
+  ~submission_date_tech_end: 
+  ~submission_date_com_start: 2024-07-3
+  ~submission_date_com_end: 2024-07-3
+  ~sortCol: client_id
+  ~sortOrder: desc
+  ~per_page: 100
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

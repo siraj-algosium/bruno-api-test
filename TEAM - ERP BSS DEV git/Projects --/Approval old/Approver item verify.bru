@@ -1,0 +1,25 @@
+meta {
+  name: Approver item verify
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/projects/3/items/1/approver-verify
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "is_approval_verified": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

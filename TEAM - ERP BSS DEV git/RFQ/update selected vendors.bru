@@ -1,0 +1,25 @@
+meta {
+  name: update selected vendors
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base}}/rfq/9/vendors
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "vendor_ids":["43","44","45"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

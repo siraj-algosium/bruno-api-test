@@ -1,0 +1,28 @@
+meta {
+  name: Product Listing
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base}}/purchase-request/14/products
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~page: 2
+  ~per_page: 200
+  ~code: 2
+  ~name: 2
+  ~description: 2 p
+  ~structure_name: te
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

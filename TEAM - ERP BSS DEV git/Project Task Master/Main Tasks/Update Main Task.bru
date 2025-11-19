@@ -1,0 +1,26 @@
+meta {
+  name: Update Main Task
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/project-master/main-tasks/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"Main Task 1ddd",
+      "weightage":"20"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

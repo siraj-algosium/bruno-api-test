@@ -1,0 +1,28 @@
+meta {
+  name: Search enquiries
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/enquiries/matched-list
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+    "project_title": "mmm",
+    "client_id": 23,//Siraj
+    "enquiry_type": 1,//Project
+    "log_category": 8 //Automation Division
+  }
+}
+
+settings {
+  encodeUrl: true
+}

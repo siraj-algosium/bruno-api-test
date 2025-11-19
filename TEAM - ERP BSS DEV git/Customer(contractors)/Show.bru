@@ -1,0 +1,23 @@
+meta {
+  name: Show
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/customer/160
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~branch: 11
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

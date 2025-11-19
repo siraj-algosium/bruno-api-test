@@ -1,0 +1,37 @@
+meta {
+  name: bomAttribute
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/api/mockProjectPlanninghttp://localhost:3000/api/mockProjectPlanning
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+    "name": "aa2",
+    "description": "dd",
+    "field_type": "text_box",
+    "value_arr": [
+      {
+        "id": 2,
+        "value": "hh111"
+      }
+    ],
+    "value_del_ids": [
+      1
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

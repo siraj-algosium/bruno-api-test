@@ -1,0 +1,25 @@
+meta {
+  name: Units
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base}}/units
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 2175|HifXTe4qHczB0YZPuoJwZ8abEsntn3HxWKQkBSXO4dd90656
+}
+
+body:json {
+  {
+    "measurement_id":"1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: subtask comments list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/projects/29/project-planning/sub-tasks/87/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment": "asdsad"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

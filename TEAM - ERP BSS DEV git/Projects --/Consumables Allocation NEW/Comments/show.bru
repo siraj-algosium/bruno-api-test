@@ -1,0 +1,23 @@
+meta {
+  name: show
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/purchase-request/3/consumable-allocation/products/7/comments
+  body: none
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 180|hpoWc8VrZUrg7byGfz1szUcrslCvMTIcbKAr9fwad404a6dd
+}
+
+settings {
+  encodeUrl: true
+}

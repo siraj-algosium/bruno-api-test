@@ -1,0 +1,26 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/logcategory/22
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "name":"Camp management",
+      "code":"CT"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

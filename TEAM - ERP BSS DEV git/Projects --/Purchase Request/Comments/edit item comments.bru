@@ -1,0 +1,25 @@
+meta {
+  name: edit item comments
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base}}/projects/1/purchase-request/1/items/72/comments/71
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment":"hi test comment 555"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

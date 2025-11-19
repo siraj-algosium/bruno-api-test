@@ -1,0 +1,25 @@
+meta {
+  name: create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/boq-cost/items/182/vendors
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"Sreyas P P"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

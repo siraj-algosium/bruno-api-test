@@ -1,0 +1,19 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/purchase-request/3/consumable-allocation/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

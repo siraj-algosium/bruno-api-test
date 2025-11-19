@@ -1,0 +1,19 @@
+meta {
+  name: Project Item Listing
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/projects/25/items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

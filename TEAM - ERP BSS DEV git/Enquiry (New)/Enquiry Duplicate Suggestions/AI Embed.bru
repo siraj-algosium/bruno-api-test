@@ -1,0 +1,25 @@
+meta {
+  name: AI Embed
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://fastapi-datnext-dev.algosium.com/embed
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+    "enqId": 602
+  }
+}
+
+settings {
+  encodeUrl: true
+}

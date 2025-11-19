@@ -1,0 +1,33 @@
+meta {
+  name: Clients LW
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/clientsLW?active=true&page=1&per_page&exclude_ids[]=3&exclude_ids[]=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  active: true
+  page: 1
+  per_page: null
+  exclude_ids[]: 3
+  exclude_ids[]: 
+  ~name: da
+}
+
+headers {
+  Branch: 1
+  Accept: application/ecmascript
+}
+
+auth:bearer {
+  token: 241|sN6iInw6RvwnFfE0ZelLEp0iZMW1kWVCGUUVqdVI8f409cb3
+}
+
+settings {
+  encodeUrl: true
+}

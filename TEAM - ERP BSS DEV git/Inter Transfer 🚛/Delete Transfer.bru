@@ -1,0 +1,19 @@
+meta {
+  name: Delete Transfer
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{base}}/inventory-inter-transfers/16
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,31 @@
+meta {
+  name: add-item
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/boq-cost/items
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":106,
+      "estimation_boq_cost_id":1,
+      "item_id":112,
+      "item_variant_id":134,
+      "type":"item",
+      "bom_main_id": null,
+      "structure_id": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

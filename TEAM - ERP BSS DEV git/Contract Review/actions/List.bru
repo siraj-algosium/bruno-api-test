@@ -1,0 +1,30 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/contract-review-actions/?sort_col=id&sort_order=desc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort_col: id
+  sort_order: desc
+  ~log_noContractReview: 14
+  ~assigned_to_name: sre
+  ~creator_name: sre
+  ~status: completed
+  ~assigned_to_me: true
+}
+
+headers {
+  branch: 11
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

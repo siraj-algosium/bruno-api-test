@@ -1,0 +1,19 @@
+meta {
+  name: Production Units
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base}}/production-units
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

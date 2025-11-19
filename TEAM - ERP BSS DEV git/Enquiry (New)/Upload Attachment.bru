@@ -1,0 +1,25 @@
+meta {
+  name: Upload Attachment
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{base}}/enquiries/463/attachment
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:multipart-form {
+  attachment: @file(/home/venis/Downloads/20mb.pdf)
+  type: test
+  file_display_name: test
+}
+
+settings {
+  encodeUrl: true
+}

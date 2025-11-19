@@ -1,0 +1,26 @@
+meta {
+  name: resolve
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/projects/3/comments/item/13/resolve
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "comment":"hi test comment 123",
+      "project_item_id":13
+  }
+}
+
+settings {
+  encodeUrl: true
+}

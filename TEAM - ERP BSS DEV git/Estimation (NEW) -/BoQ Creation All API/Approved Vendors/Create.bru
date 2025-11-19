@@ -1,0 +1,29 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/boq-creation/items/2/vendors
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2215|JhUvdsm6NvLgoCTLCxE92o5QrVtm9gXQZoPjlhg5121181fd
+}
+
+body:json {
+  {
+      "name":"Vendor 3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

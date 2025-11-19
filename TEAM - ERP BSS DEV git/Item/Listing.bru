@@ -1,0 +1,33 @@
+meta {
+  name: Listing 
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base}}/item?type=&status=&item_category_name=&sortCol=&sortOrder=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  type: 
+  status: 
+  item_category_name: 
+  sortCol: 
+  sortOrder: 
+  ~name: 1
+  ~code: ITSP002
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+settings {
+  encodeUrl: true
+}

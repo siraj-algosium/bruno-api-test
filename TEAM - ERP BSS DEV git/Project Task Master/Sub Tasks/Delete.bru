@@ -1,0 +1,19 @@
+meta {
+  name: Delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base}}/project-master/main-tasks/1/sub-tasks/2
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

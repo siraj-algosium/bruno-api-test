@@ -1,0 +1,30 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/branch/2
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1344|G8IPsB1jctpK3IQMxaj6Pv7knXd17EQoYKFlZGNqde37bdfb
+}
+
+body:json {
+  {
+      "departmentCode":"1",
+      "departmentName":"Dep22",
+      "prnName":"pnn",
+      "prnAddress":"pAdd",
+      "prnPhone":"123456",
+      "prnWebsite":"abcc"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

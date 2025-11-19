@@ -1,0 +1,37 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/estimations/6
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+    "prepared_by": "1",
+    "request_date": "2024-08-06",
+    "team_leader": 1,
+    "reviewer": 1,
+    "approver": 1,
+    "status": "pending",
+    "enquiry_id": 2,
+    "internal_revision": "1tt"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

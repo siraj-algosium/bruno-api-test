@@ -1,0 +1,26 @@
+meta {
+  name: update
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base}}/items/8/attribute/17
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "name" : "Color 8"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

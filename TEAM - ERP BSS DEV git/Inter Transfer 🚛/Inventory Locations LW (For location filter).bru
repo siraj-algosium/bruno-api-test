@@ -1,0 +1,30 @@
+meta {
+  name: Inventory Locations LW (For location filter)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/inventoryLocationsLW?type=warehouse&status=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  type: warehouse
+  status: true
+  ~exclude_ids: 17
+  ~name: W1Z
+  ~per_page: 5
+  ~page: 1
+  ~name_field_source: location_id
+}
+
+headers {
+  Branch: 1
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

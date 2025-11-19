@@ -1,0 +1,26 @@
+meta {
+  name: rfq items and products
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/rfq/9/items-and-products
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 5
+  ~page: 2
+  ~sort_col: created_at
+  ~sort_order: asc
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

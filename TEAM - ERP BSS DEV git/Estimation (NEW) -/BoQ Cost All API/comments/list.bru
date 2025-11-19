@@ -1,0 +1,25 @@
+meta {
+  name: list
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/boq-cost/1/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":106
+  }
+}
+
+settings {
+  encodeUrl: true
+}

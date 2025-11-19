@@ -1,0 +1,19 @@
+meta {
+  name: resolve item comments
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{base}}/projects/1/purchase-request/1/items/72/comments/resolve
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

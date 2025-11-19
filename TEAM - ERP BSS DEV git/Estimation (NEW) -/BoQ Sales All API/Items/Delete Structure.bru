@@ -1,0 +1,30 @@
+meta {
+  name: Delete Structure
+  type: http
+  seq: 14
+}
+
+delete {
+  url: {{base}}/boq-sale/structures/1
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+body:json {
+  {
+      "estimation_id":4,
+      "estimation_boq_sale_id":16
+  }
+}
+
+settings {
+  encodeUrl: true
+}

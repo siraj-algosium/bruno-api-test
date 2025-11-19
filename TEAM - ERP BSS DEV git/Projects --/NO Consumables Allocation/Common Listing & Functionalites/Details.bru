@@ -1,0 +1,19 @@
+meta {
+  name: Details
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/purchase-request/22/consumable-allocation
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

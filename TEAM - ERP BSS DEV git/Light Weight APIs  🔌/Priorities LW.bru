@@ -1,0 +1,31 @@
+meta {
+  name: Priorities LW
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/prioritiesLW?name=B&page=1&per_page
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: B
+  page: 1
+  per_page: null
+  ~active: true
+}
+
+headers {
+  Branch: 1
+  Accept: application/ecmascript
+}
+
+auth:bearer {
+  token: 241|sN6iInw6RvwnFfE0ZelLEp0iZMW1kWVCGUUVqdVI8f409cb3
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,174 @@
+meta {
+  name: List - Advanced Search
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/enquiries/list?sortCol=client_id&sortOrder=desc&per_page=30&page=2
+  body: json
+  auth: inherit
+}
+
+params:query {
+  sortCol: client_id
+  sortOrder: desc
+  per_page: 30
+  page: 2
+  ~project_title: scope
+  ~description: testv1
+  ~log_no: SA250027
+  ~customer_reference: 11
+  ~tender_no: 12
+  ~region: Abu
+  ~remarks: d
+  ~log_category: 1
+  ~enquiry_type[]: 1
+  ~enquiry_type[]: 2
+  ~priority: 1
+  ~contractor: 11
+  ~client: 11
+  ~local_company: 1
+  ~country_code: 1
+  ~received_date: 2024-04-23
+  ~last_date: 2001-01-02
+  ~estimation_coordinator: 1
+  ~proposal_engineer: 1
+  ~sales_engineer: 1
+  ~status: 1
+  ~next_followup_date: 2001-01-01
+  ~add_contact: 167
+  ~sortOrder: project_title
+  ~awarded_date_start: 2024-08-01
+  ~awarded_date_end: 2024-08-01
+  ~next_followup_date_start: 2024-05-29
+  ~next_followup_date_end: 2024-09-29
+  ~received_date_start: 2024-05-24
+  ~received_date_end: 2024-09-24
+  ~last_date_start: 2024-06-25
+  ~last_date_end: 2024-07-25
+  ~submission_date_tech_start: 
+  ~submission_date_tech_end: 
+  ~submission_date_com_start: 2024-07-3
+  ~submission_date_com_end: 2024-07-3
+  ~enquiry_reg_date_start: null
+  ~enquiry_reg_date_end: null
+}
+
+headers {
+  Branch: 11
+  Accept: application/ecmascript
+}
+
+body:json {
+  {
+      "project_title": {
+        "filter_type": "include",
+        "value": "scope"
+      },
+      "description": {
+        "filter_type": "include",
+        "value": "testv1"
+      },
+      "log_no": {
+        "filter_type": "include",
+        "value": "SA250027"
+      },
+      "customer_reference": {
+        "filter_type": "include",
+        "value": "11"
+      },
+      "tender_no": {
+        "filter_type": "include",
+        "value": "12"
+      },
+      "region": {
+        "filter_type": "include",
+        "value": "Abu"
+      },
+      "remarks": {
+        "filter_type": "include",
+        "value": ""
+      },
+      "customer_id":{
+          "filter_type": "include",
+          "values": [1,2]
+      },
+      "client_id":{
+          "filter_type": "include",
+          "values": [1,2]
+      },
+      "log_category": {
+        "filter_type": "include",
+        "values": [1]
+      },
+      "enquiry_type": {
+        "filter_type": "include",
+        "values": [1, 2]
+      },
+      "priority": {
+        "filter_type": "include",
+        "values": [1]
+      },
+      "country_code": {
+        "filter_type": "include",
+        "values": [1]
+      },
+      "estimation_coordinator": {
+        "filter_type": "include",
+        "values": [1]
+      },
+      "proposal_engineer": {
+        "filter_type": "include",
+        "values": [1]
+      },
+      "sales_engineer": {
+        "filter_type": "include",
+        "values": [1]
+      },
+      "status": {
+        "filter_type": "exclude",
+        "values": [2, 3]
+      },
+      "awarded_date": {
+        "filter_type": "include",
+        "start_date": "2024-08-01",
+        "end_date": "2024-08-01"
+      },
+      "next_followup_date": {
+        "filter_type": "include",
+        "start_date": "2024-05-29",
+        "end_date": "2024-09-29"
+      },
+      "received_date": {
+        "filter_type": "include",
+        "start_date": "2024-05-24",
+        "end_date": "2024-09-24"
+      },
+      "last_date": {
+        "filter_type": "include",
+        "start_date": "2025-08-01",
+        "end_date": "2025-08-31"
+      },
+      "submission_date_tech": {
+        "filter_type": "include",
+        "start_date": "",
+        "end_date": ""
+      },
+      "submission_date_com": {
+        "filter_type": "include",
+        "start_date": "2024-07-03",
+        "end_date": "2024-07-03"
+      },
+      "enquiry_reg_date": {
+        "filter_type": "include",
+        "start_date": "",
+        "end_date": ""
+      }
+      
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base}}/projects/2/purchase-request/3/consumable-allocation/products/165/comments/76
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "comment_source": "purchase_request"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

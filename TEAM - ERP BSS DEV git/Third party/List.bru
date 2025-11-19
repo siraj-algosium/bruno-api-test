@@ -1,0 +1,32 @@
+meta {
+  name: List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/thirdparty
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~type: 1
+  ~third_party_address: add
+  ~third_party_country: AMERICAN SAMOA
+  ~email_address: ee
+  ~sortOrder: registration_date:false
+  ~contact_personName: jj
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+settings {
+  encodeUrl: true
+}

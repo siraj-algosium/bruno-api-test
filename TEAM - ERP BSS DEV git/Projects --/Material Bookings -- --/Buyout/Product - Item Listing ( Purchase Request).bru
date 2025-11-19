@@ -1,0 +1,24 @@
+meta {
+  name: Product - Item Listing ( Purchase Request)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/purchase-request/3/material-booking-buyout/products/8/items?sortCol=item_name&sortOrder=asc
+  body: json
+  auth: inherit
+}
+
+params:query {
+  sortCol: item_name
+  sortOrder: asc
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

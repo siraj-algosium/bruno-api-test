@@ -1,0 +1,26 @@
+meta {
+  name: Assign Roles
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/2/create-consumable-allocation
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "reviewer":2,
+      "approver":3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: store selected vendors in item
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/items/382/vendors
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+    "vendor_ids": [30]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

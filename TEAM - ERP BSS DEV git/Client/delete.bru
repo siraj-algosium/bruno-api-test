@@ -1,0 +1,31 @@
+meta {
+  name: delete
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base}}/client/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "contact_number" : "1231231231",
+      "email_address" : "asd@d.asd",
+      "isActive" : "true",
+      "registration_date" : "2025-04-11",
+      "client_address" : "asd",
+      "client_country" : 82,
+      "client_name" : "asd"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

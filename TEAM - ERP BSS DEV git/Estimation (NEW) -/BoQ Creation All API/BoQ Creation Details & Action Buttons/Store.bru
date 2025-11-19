@@ -1,0 +1,32 @@
+meta {
+  name: Store
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/api/boq-creation
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "enquiry_id":"11",
+      "prepared_by":1,
+      "reviewer":1,
+      "approver":1,
+      "team_leader":1,
+      "created_date":"2024-10-01",
+      "due_date":"2025-05-01",
+      "internal_revision":"1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

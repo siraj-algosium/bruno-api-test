@@ -1,0 +1,19 @@
+meta {
+  name: comparision
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/rfq/9/quotation/compare
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

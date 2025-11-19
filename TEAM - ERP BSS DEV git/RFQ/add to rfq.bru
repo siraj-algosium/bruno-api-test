@@ -1,0 +1,25 @@
+meta {
+  name: add to rfq
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/rfq/1/add-to-rfq
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "buyout_ids": [61]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

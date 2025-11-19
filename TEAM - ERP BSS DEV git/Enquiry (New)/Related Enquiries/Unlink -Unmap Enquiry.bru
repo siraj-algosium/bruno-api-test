@@ -1,0 +1,19 @@
+meta {
+  name: Unlink /Unmap Enquiry
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/enquiries/245/unlink-parent
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

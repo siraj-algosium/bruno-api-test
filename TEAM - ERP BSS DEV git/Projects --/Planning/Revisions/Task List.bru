@@ -1,0 +1,33 @@
+meta {
+  name: Task List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/projects/24/project-planning/revisions/1/tasks
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 10
+  ~page: 1
+  ~task_name: Task 2
+  ~code: 
+  ~assigned_engineer_name: 
+  ~subtask_name: update 1
+  ~subtask_code: t
+  ~subtask_assigned_engineer_name: tt
+  ~status: not_started
+  ~sort_col: status
+  ~sort_order: desc
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

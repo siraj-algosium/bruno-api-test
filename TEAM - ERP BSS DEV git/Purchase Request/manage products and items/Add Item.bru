@@ -1,0 +1,28 @@
+meta {
+  name: Add Item
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/purchase-request/1/store-items-and-products
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "item_id":118,
+      "item_variant_id":460,
+      "type":"item",
+      "structure_id": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

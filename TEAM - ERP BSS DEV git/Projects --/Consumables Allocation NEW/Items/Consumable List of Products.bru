@@ -1,0 +1,24 @@
+meta {
+  name: Consumable List of Products
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/purchase-request/3/consumable-allocation/products/7/consumables
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~sort_col: item_name
+  ~sort_order: asc
+}
+
+headers {
+  Branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

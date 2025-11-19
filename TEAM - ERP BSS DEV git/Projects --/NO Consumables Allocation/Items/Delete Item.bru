@@ -1,0 +1,19 @@
+meta {
+  name: Delete Item
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{base}}/projects/2/purchase-request/2/products/163/consumables/385
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

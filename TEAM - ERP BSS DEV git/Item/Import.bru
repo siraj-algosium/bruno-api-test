@@ -1,0 +1,23 @@
+meta {
+  name: Import
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{base-uat}}/import-items
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:multipart-form {
+  file: @file()
+}
+
+settings {
+  encodeUrl: true
+}

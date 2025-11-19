@@ -1,0 +1,19 @@
+meta {
+  name: show
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/products/163/comments
+  body: none
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

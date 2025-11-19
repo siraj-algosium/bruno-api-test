@@ -1,0 +1,23 @@
+meta {
+  name: Dashboard
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base}}/estimationsDashboard
+  body: none
+  auth: bearer
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: 1947|dqsyTX8qniPHJfr1bEGITdnJOTCgF489EW0FzQrNe3419d4a
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,36 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/inventory-warehouses?name=co&location_id=&address&description&created_by&contact_person&created_at_start&created_at_end&sort_order=desc&sort_col=name
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: co
+  location_id: 
+  address: null
+  description: null
+  created_by: null
+  contact_person: null
+  created_at_start: null
+  created_at_end: null
+  sort_order: desc
+  sort_col: name
+  ~store_location: India
+  ~page: 1
+  ~per_page: 10
+  ~status: active
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

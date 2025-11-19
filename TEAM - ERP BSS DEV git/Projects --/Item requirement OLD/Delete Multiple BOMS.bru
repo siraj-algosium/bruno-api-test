@@ -1,0 +1,25 @@
+meta {
+  name: Delete Multiple BOMS
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base}}/projects/2/items/destroyMultipleBoms
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "project_bom_ids":[8]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

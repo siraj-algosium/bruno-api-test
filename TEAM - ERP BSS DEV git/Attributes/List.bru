@@ -1,0 +1,25 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/attributes
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~name: Shape
+  ~tags: shape
+  ~description: dd
+}
+
+auth:bearer {
+  token: 223|VkknSX5c8XUCAx2B5voM16uys9WbHwZPpDGOxpcD6fd9b852
+}
+
+settings {
+  encodeUrl: true
+}

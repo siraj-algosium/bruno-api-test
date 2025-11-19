@@ -1,0 +1,25 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/31/task-manager/activities/1/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+     "comment":"new comment 3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,24 @@
+meta {
+  name: History
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{base}}/enquiries/79/history
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 1
+  ~per_page: 20
+}
+
+headers {
+  branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

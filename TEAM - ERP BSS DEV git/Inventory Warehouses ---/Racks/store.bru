@@ -1,0 +1,27 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/inventory-warehouses/2/zones/4/racks
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"{{rack_name}}",
+      "description":"bulk Desc .................................................."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

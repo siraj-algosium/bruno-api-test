@@ -1,0 +1,25 @@
+meta {
+  name: deleteFollowUpAttachment
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/deleteFollowUpAttachment
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1344|G8IPsB1jctpK3IQMxaj6Pv7knXd17EQoYKFlZGNqde37bdfb
+}
+
+body:json {
+  {
+    "name":"1724397842.jpg"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

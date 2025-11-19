@@ -1,0 +1,25 @@
+meta {
+  name: Show Actrivity
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/projects/31/task-manager/activities/71
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "planning_subtask_id":42
+  }
+}
+
+settings {
+  encodeUrl: true
+}

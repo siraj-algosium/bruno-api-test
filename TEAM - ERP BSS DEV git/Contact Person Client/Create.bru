@@ -1,0 +1,27 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/client/contactPerson
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+    "name":"testname",
+    "contactNumber":"12345678",
+    "client_id":7
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,33 @@
+meta {
+  name: Purchase Requests - All
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/projects/consumable-allocation-purchase-requests?sortCol=project_code&sortOrder=desc
+  body: json
+  auth: inherit
+}
+
+params:query {
+  sortCol: project_code
+  sortOrder: desc
+  ~per_page: 2
+  ~status: queued
+  ~code: 3
+  ~created_at: 2025-06-13
+  ~creater_name: ad
+  ~reviewer_name: 23
+  ~approver_name: ad
+  ~project_code: 02
+  ~project_title: 2
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

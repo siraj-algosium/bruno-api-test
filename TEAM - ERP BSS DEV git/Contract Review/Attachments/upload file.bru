@@ -1,0 +1,25 @@
+meta {
+  name: upload file
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/contract-reviews/412/attachments
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:multipart-form {
+  attachment: @file(/home/venis/Pictures/Screenshots/Screenshot from 2025-06-09 12-29-14.png)
+  file_display_name: attachemetn 1
+  type: documenty tyep
+}
+
+settings {
+  encodeUrl: true
+}

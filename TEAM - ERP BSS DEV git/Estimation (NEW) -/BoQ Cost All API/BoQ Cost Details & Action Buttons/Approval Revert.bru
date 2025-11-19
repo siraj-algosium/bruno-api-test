@@ -1,0 +1,25 @@
+meta {
+  name: Approval Revert
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/boq-cost/1/approval-revert
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":106
+  }
+}
+
+settings {
+  encodeUrl: true
+}

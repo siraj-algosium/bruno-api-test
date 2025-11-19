@@ -1,0 +1,30 @@
+meta {
+  name: Users List LW (Use this for Search Filters instead of old LW api)
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base}}/usersLW?page=1&per_page&permission_filter=enquiry.list&is_active=true&permission_filter=warehouse-setup.edit
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  per_page: null
+  permission_filter: enquiry.list
+  is_active: true
+  permission_filter: warehouse-setup.edit
+  ~name: CP
+  ~exclude_ids: 3
+}
+
+headers {
+  Branch: 11
+  Accept: application/ecmascript
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: store activity
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base}}/projects/31/task-manager/activities
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "planning_subtask_id":63,
+      "name":"Activity 6",
+      "description":"dfffaff",
+      "planned_start_date":"2025-06-09",
+      "planned_end_date":"2025-06-30",
+      "assigned_engineer":"2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

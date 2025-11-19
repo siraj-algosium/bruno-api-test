@@ -1,0 +1,26 @@
+meta {
+  name: update comment
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base}}/project_design_request/3/attachments/comments/12
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "attachment":5,
+      "comment": "sss sss sss ssss 133."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

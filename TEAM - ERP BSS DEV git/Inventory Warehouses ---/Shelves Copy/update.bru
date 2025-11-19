@@ -1,0 +1,28 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/inventory-warehouses/2/zones/1/racks/1/shelves/6
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "name":"Shelf 1 ddd",
+      "description":"Desc",
+      "status":true
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base1}}/client/contactPerson/4
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 1
+}
+
+body:json {
+  {
+    "name":"testname 1",
+    "contactNumber":"12345678",
+    "isActive":true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,33 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/bom-templates
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+body:json {
+  {
+      "name":"Template 3",
+      "description":"test",
+      "bom_category_id":1,
+      "bom_attributes":[2,3,4],
+      "items":[83,82]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

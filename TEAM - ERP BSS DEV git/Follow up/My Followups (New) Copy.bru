@@ -1,0 +1,30 @@
+meta {
+  name: My Followups (New) Copy
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/followUp/my-follow-ups
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~subject: 1
+  ~enquiry_log_no: TX24001A
+  ~complete_remark: 
+  ~next_date_start: 2024-11-01
+  ~next_date_end: 2024-11-30
+  ~created_at_start: 2024-11-14
+  ~created_at_end: 2024-11-14
+  ~status: completed
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

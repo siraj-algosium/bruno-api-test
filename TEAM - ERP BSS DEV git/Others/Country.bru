@@ -1,0 +1,23 @@
+meta {
+  name: Country
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base}}/country?getAll=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  getAll: true
+}
+
+auth:bearer {
+  token: 1352|ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+settings {
+  encodeUrl: true
+}

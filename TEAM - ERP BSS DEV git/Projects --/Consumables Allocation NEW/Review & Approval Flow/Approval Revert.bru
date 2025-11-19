@@ -1,0 +1,23 @@
+meta {
+  name: Approval Revert
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/purchase-request/3/consumable-allocation/approval-revert
+  body: none
+  auth: bearer
+}
+
+headers {
+  Branch: 11
+}
+
+auth:bearer {
+  token: 180|hpoWc8VrZUrg7byGfz1szUcrslCvMTIcbKAr9fwad404a6dd
+}
+
+settings {
+  encodeUrl: true
+}

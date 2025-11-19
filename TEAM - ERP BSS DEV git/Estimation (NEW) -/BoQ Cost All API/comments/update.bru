@@ -1,0 +1,25 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/boq-cost/items/23/comments/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "comment":"updated the requirement"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Update quoted vendor
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base}}/boq-cost/items/182/vendors/quoted
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "name":"Sreyas P P"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

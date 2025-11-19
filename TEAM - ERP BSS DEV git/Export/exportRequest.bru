@@ -1,0 +1,31 @@
+meta {
+  name: exportRequest
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://datnext-dev-api.algosium.com/api/exportRequest
+  body: json
+  auth: bearer
+}
+
+headers {
+  branch: 2
+}
+
+auth:bearer {
+  token: 2012|TiCqUjmFYNy7QHHY7C6TVaG8vlgNrFEhPMtjDx4N0430d0c9
+}
+
+body:json {
+  {
+      "fileType": "xlsx",
+      "resource": "enquiry",
+      "status": "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: itemVariantActiveInActive
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{base}}/itemVariantActiveInActive/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+      "status":"inactive"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

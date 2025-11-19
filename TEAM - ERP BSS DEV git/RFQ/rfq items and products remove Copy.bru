@@ -1,0 +1,19 @@
+meta {
+  name: rfq items and products remove Copy
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{base}}/rfq/1/items-and-products/6
+  body: none
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

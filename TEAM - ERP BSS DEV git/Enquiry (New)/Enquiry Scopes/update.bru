@@ -1,0 +1,25 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/log-categories/1/enquiry-scopes/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "name":"Scope 1-1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

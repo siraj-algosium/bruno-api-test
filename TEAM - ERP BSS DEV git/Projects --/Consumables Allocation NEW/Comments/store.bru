@@ -1,0 +1,29 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/purchase-request/3/consumable-allocation/products/7/comments
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 180|hpoWc8VrZUrg7byGfz1szUcrslCvMTIcbKAr9fwad404a6dd
+}
+
+body:json {
+  {
+      "comment":"comment to PR"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

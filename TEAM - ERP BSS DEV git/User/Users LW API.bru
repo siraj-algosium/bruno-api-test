@@ -1,0 +1,28 @@
+meta {
+  name: Users LW API
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base}}/usersListLW?permission_filter=warehouse-setup.edit
+  body: none
+  auth: inherit
+}
+
+params:query {
+  permission_filter: warehouse-setup.edit
+  ~name: 
+  ~permission_filter: enquiry.pending.approve
+  ~permission_filter: estimation.creation.creator
+  ~permission_filter: estimation.estimation-coordinator
+  ~permission_filter: consumable-allocation.reviewer
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

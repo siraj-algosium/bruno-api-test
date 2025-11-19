@@ -1,0 +1,25 @@
+meta {
+  name: Forward to Reviewer ( From Creator)
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base}}/boq-creation/2/forward-to-reviewer
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":88
+  }
+}
+
+settings {
+  encodeUrl: true
+}

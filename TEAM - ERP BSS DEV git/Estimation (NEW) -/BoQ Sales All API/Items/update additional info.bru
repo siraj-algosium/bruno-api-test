@@ -1,0 +1,30 @@
+meta {
+  name: update additional info
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base}}/boq-sale/items/20/additional-info
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: 15|WRFLA9LAyFKSE9wv6MsjiLB12KjNVFvbPltbJc3e97eb0fd2
+}
+
+body:json {
+  {
+      "estimation_boq_sale_id":2,
+      "additional_info":"addteahi"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

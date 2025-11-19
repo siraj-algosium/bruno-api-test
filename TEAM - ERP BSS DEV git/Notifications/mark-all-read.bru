@@ -1,0 +1,23 @@
+meta {
+  name: mark-all-read
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/notifications/mark-all-read
+  body: none
+  auth: bearer
+}
+
+headers {
+  branch: 1
+}
+
+auth:bearer {
+  token: 2299|Pwg4GQbMQjb413kAM4T3r2zgUIsehh7ncFwMFUYp02c2a4a0
+}
+
+settings {
+  encodeUrl: true
+}

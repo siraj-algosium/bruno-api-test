@@ -1,0 +1,25 @@
+meta {
+  name: destroy attachments
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base}}/projects/1/purchase-request/1/attachments/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "is_approved": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

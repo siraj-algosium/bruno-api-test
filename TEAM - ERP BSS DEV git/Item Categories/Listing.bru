@@ -1,0 +1,27 @@
+meta {
+  name: Listing 
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/item-categories?name=Tabs
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: Tabs
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+settings {
+  encodeUrl: true
+}

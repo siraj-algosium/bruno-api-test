@@ -1,0 +1,28 @@
+meta {
+  name: sub task update
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base}}/projects/24/project-planning/sub-tasks/46
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "percentage":20,
+      "planned_start_date":"2025-06-02",
+      "planned_end_date":"2025-06-30",
+      "assigned_engineer":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

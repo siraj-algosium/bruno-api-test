@@ -1,0 +1,25 @@
+meta {
+  name: store vendors
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{base}}/vendors/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "name":"scsc"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Products item Listing
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base}}/projects/2/purchase-request/1/products/101/view-items
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~sort_col: item_name
+  ~sort_order: asc
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: vendors
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base}}/rfq/1/vendors
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 1
+  ~get_all: null
+  ~page: null
+  ~vendor_id: 24
+  ~name: 8
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

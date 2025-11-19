@@ -1,0 +1,30 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/inventory-inter-transfers?sort_order=desc&sort_col=status
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort_order: desc
+  sort_col: status
+  ~transfer_code: 006
+  ~warehouse_code: 1
+  ~page: 1
+  ~per_page: 10
+  ~created_by: 1
+  ~status: pending
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

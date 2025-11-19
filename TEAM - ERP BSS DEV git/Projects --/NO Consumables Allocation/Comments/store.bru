@@ -1,0 +1,25 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/products/165/comments
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "comment":"second Review Comment"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Update Item
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/boq-creation/items/22/change-variant
+  body: json
+  auth: bearer
+}
+
+headers {
+  Branch: 11
+}
+
+auth:bearer {
+  token: Q7Uvwdcc9NsWzU29O2gU2tE5CNU0UHc4XKx0Y6Nt7603bbfd
+}
+
+body:json {
+  {
+      "estimation_id":88,
+      "estimation_boq_creation_id":2,
+      "item_id":2,
+      "item_variant_id":123
+  }
+}
+
+settings {
+  encodeUrl: true
+}

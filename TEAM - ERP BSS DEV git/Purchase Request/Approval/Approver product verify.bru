@@ -1,0 +1,25 @@
+meta {
+  name: Approver product verify
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base}}/projects/2/purchase-request/1/products/13/approver-verify
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "is_approval_verified": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

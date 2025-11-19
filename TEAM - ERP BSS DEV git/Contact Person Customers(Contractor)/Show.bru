@@ -1,0 +1,19 @@
+meta {
+  name: Show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base1}}/customer/contactPerson/4
+  body: none
+  auth: inherit
+}
+
+headers {
+  branch: 1
+}
+
+settings {
+  encodeUrl: true
+}

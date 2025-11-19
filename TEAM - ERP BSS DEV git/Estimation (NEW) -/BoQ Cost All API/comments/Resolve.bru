@@ -1,0 +1,26 @@
+meta {
+  name: Resolve
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base}}/boq-cost/items/23/comments/resolve
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "estimation_id":106,
+      "estimation_boq_cost_id":1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

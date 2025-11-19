@@ -1,0 +1,50 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base}}/contractReview
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1352|ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  
+   {
+      "enquiry_id":274,
+      "startDate":"2024-11-06",
+      "endDate":"2024-12-02",
+      "deliveryDate":"2024-12-02",
+      "techReviewer":1,
+      "comReviewer":1,
+      "finApprover":1,
+      "revFullfillProject":true,
+      "revDiffTenderOrder":true,
+      "revDocumentClient":true,
+      "revRequirementResolved":true,
+      "revCommTenderOrder":true,
+      "insWorkComp":true,
+      "insMotorLiab":true,
+      "insProfIndem":true,
+      "insGenTplCar":true,
+      "bankAdvPay":true,
+      "bankPerfGrnty":true,
+      "bankWrtyGrnty":true,
+      "bankKycReq":true,
+      "bankCreditApp":true,
+      "paymentTerms":"Credit",
+      "deliveryTerms":"Ex-Works",
+      "poNumber":"ee25",
+      "other":"example text"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

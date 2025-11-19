@@ -1,0 +1,27 @@
+meta {
+  name: Purchase Requests - For a Project
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base}}/projects/2/material-booking-purchase-requests?status=completed
+  body: json
+  auth: inherit
+}
+
+params:query {
+  status: completed
+  ~per_page: 2
+  ~material_booking_code: 3
+  ~purchase_request_code: 4
+  ~created_at: 2025-06-13
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

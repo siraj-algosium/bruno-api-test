@@ -1,0 +1,26 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/2/consumable-allocation/products/165/comments/75
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "comment":"updated the requirement",
+      "comment_source": "purchase_request"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

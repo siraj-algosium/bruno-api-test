@@ -1,0 +1,25 @@
+meta {
+  name: Project Review/revert
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/projects/2/purchase-request/1/update-review
+  body: json
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "is_reviewed": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

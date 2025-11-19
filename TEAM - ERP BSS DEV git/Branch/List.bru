@@ -1,0 +1,30 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/branch?page=1?sortCol=name&sortOrder=DESC
+  body: none
+  auth: bearer
+}
+
+params:query {
+  sortCol: name
+  sortOrder: DESC
+  ~name: tt1
+  ~address: add
+  ~contact_number: 124
+  ~code: 1
+  ~email: ee@rr.com
+  ~website: www
+}
+
+auth:bearer {
+  token: 92|2osld2jKcNC5ZsskGOrkccanBun7PjRphNrSNWRQbb01f72e
+}
+
+settings {
+  encodeUrl: true
+}

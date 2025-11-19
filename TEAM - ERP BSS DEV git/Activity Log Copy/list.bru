@@ -1,0 +1,24 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base}}/user-activity-log?created_at_start=2024-12-20 00:00:00&created_at_end=2024-12-20 23:59:59
+  body: none
+  auth: inherit
+}
+
+params:query {
+  created_at_start: 2024-12-20 00:00:00
+  created_at_end: 2024-12-20 23:59:59
+}
+
+headers {
+  Branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Inventory Stock Add - Product
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base}}/inventory-stocks/add
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 11
+}
+
+body:json {
+  {
+      "item_id":null,
+      "item_variant_id":null,
+      "bom_main_id":40,
+      "quantity":100
+  }
+}
+
+settings {
+  encodeUrl: true
+}

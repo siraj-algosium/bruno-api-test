@@ -1,0 +1,19 @@
+meta {
+  name: Send to review
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/projects/3/send-to-review
+  body: none
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,40 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/components/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1947|dqsyTX8qniPHJfr1bEGITdnJOTCgF489EW0FzQrNe3419d4a
+}
+
+body:json {
+  {
+      "name":"cffff",
+      "tags":"cmp-tag",
+      "description":"ddd",
+      "attributes_arr":[
+          {
+              "attribute_id":1,
+              "show_when":{
+                  "and":[
+                      {
+                          "1":10
+                      }
+                  ]
+              }
+          }
+          
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

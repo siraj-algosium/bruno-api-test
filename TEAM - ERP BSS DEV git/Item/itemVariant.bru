@@ -1,0 +1,36 @@
+meta {
+  name: itemVariant
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base}}/itemVariant
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ZvXg0cIWiwMzGafIu7o1NyVES5JldCtyAe6nj1axc2dd9482
+}
+
+body:json {
+  {
+    "item": 1,
+    "name": "Variant5",
+    "code": "VAR3",
+    "status": "active",
+    "attr_arr": [
+      {
+        "attribute": 1,
+        "attribute_value": 3
+      }
+    ],
+    "attr_del_ids": [1]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

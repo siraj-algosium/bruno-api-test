@@ -1,0 +1,27 @@
+meta {
+  name: Attachment upload
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base}}/project_design_request/1/attachments
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  branch: 11
+}
+
+body:multipart-form {
+  name: test
+  type: test
+  attachment: @file(/C:/Users/sreyas/Pictures/Screenshots/Screenshot 2025-03-27 094456.png)
+  category: design
+  category: reference
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Review Revert
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base}}/boq-sale/16/review-revert
+  body: json
+  auth: inherit
+}
+
+headers {
+  Branch: 1
+}
+
+body:json {
+  {
+      "estimation_id":4
+  }
+}
+
+settings {
+  encodeUrl: true
+}

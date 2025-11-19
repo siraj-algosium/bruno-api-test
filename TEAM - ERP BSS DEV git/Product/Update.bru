@@ -1,0 +1,26 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base}}/product/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1916|zkQaEyyFZylzYLpuROk3ZqHa8kJRTTfG1D1eXhAOdb2c93ca
+}
+
+body:json {
+  {
+      "name":"pr1",
+      "component_arr":[1,2]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

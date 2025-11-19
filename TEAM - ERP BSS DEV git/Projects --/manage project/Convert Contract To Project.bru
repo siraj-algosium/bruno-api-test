@@ -1,0 +1,36 @@
+meta {
+  name: Convert Contract To Project
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base}}/projects/convertContractToProject/410
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~start_date: 
+  ~end_date: 
+  ~scope_of_work: 30
+}
+
+headers {
+  branch: 11
+}
+
+body:json {
+  {
+      "project_name": "sample project name",
+      "project_manager": 1,
+      "description": "descriptions",
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-12",
+      "scope_of_work": "test scope"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

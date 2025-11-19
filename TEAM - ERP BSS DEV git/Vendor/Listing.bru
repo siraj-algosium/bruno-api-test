@@ -1,0 +1,31 @@
+meta {
+  name: Listing
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base}}/vendor?review=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  review: true
+  ~name: aa
+  ~vendor_id: SUB0001
+  ~entry_date: 2024-10-12
+  ~type: sub_contractor
+}
+
+headers {
+  branch: 11
+}
+
+auth:bearer {
+  token: 2540|5wGsNjlJpMYTgDuStx4xzRIU3Ax34jcSyfXAutoTe21508f1
+}
+
+settings {
+  encodeUrl: true
+}

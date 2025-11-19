@@ -1,0 +1,23 @@
+meta {
+  name: Final Approve
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base}}/projects/1/purchase-request/1/consumable-allocation/final-approve
+  body: none
+  auth: bearer
+}
+
+headers {
+  Branch: 1
+}
+
+auth:bearer {
+  token: ['project_id' => $project_id, 'purchase_request_id' => $purchase_request_id];
+}
+
+settings {
+  encodeUrl: true
+}
